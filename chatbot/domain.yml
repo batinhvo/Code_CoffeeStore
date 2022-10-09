@@ -8,10 +8,30 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - Hoi_san_pham_cf_rx
+  - Hoi_san_pham_cf_ht
+  - Hoi_san_pham_cf_hat
+  - Hoi_ve_phi_ship
+  - Hoi_cf_ban_chay
 
 responses:
+  utter_cf_ban_chay:
+  - text: "Một số gợi ý sản phẩm cà phê được mua nhiều nhất: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),..."
+
+  utter_phi_ship:
+  - text: "Phí giao hàng trong khoảng từ 30000đ-50000đ. Bạn có thể biết rõ về khoảng tiền giao hàng khi tiến hành đặt hàng."
+
   utter_greet:
-  - text: "CoffeeStore có thể giúp gì cho bạn?"
+  - text: "Xin chào! CoffeeStore có thể giúp gì cho bạn?"
+
+  utter_rx:
+  - text: "Một số gợi ý sản phẩm cà phê rang xay: [Cà phê số 5 Dịu](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/39), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),..."
+
+  utter_ht:
+  - text: "Một số gợi ý sản phẩm cà phê hòa tan: [Cafe Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/31), [cà phê 3 in 1 GOLD](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/30),..."
+
+  utter_hat:
+  - text: "Một số gợi ý sản phẩm cà phê hạt: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/35),..."
 
   utter_cheer_up:
   - text: "Here is something to cheer you up:"
@@ -24,7 +44,7 @@ responses:
   - text: "Great, carry on!"
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "CoffeeStore cảm ơn bạn nha. Xin tạm biệt!"
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."

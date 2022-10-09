@@ -9,6 +9,31 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+- story: Hỏi cà phê bán chạy
+  steps:
+  - intent: Hoi_cf_ban_chay
+  - action: utter_cf_ban_chay
+
+- story: Hỏi cà phê rang xay
+  steps:
+  - intent: Hoi_san_pham_cf_rx
+  - action: utter_rx
+
+- story: Hỏi cà phê hòa tan
+  steps:
+  - intent: Hoi_san_pham_cf_ht
+  - action: utter_ht
+
+- story: Hỏi cà phê hạt
+  steps:
+  - intent: Hoi_san_pham_cf_hat
+  - action: utter_hat
+
+- story: Hỏi về phí ship
+  steps:
+  - intent: Hoi_ve_phi_ship
+  - action: utter_phi_ship
+
 - story: sad path 1
   steps:
   - intent: greet

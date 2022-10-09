@@ -23,7 +23,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - cu
     - good by
     - cee you later
     - good night
@@ -34,6 +33,59 @@ nlu:
     - bye bye
     - see you later
     - tạm biệt
+
+- intent: Hoi_cf_ban_chay
+  examples: |
+    - cửa hàng có cà phê nào ngon không?
+    - sản phẩm bán chạy nhất là gì?
+    - cà phê nào bán chạy nhất
+    - cà phê nào được mua nhiều nhất
+    - mua nhiều nhất
+    - sản phẩm nào ngon nhất
+    - cà phê nào ngon nhất
+
+- intent: Hoi_san_pham_cf_rx
+  examples: |
+    - cửa hàng có cà phê rang xay nào ngon không ?
+    - tôi muốn hỏi cà phê rang xay ?
+    - cà phê rang xay có những loại nào ?
+    - thông tin cà phê rang xay?
+    - rang xay
+    - ca phê rang xay
+
+- intent: Hoi_san_pham_cf_ht
+  examples: |
+    - cửa hàng có cà phê hòa tan nào ngon không ?
+    - tôi muốn hỏi cà phê hòa tan ?
+    - cà phê hòa tan có những loại nào ?
+    - thông tin cà phê hòa tan?
+    - hòa tan
+    - ca phê hòa tan
+
+- intent: Hoi_san_pham_cf_hat
+  examples: |
+    - cửa hàng có cà phê hạt nào ngon không ?
+    - tôi muốn hỏi cà phê hạt ?
+    - cà phê hạt có những loại nào ?
+    - thông tin cà phê hạt?
+    - hạt
+    - ca phê hạt
+
+- intent: Hoi_ve_phi_ship
+  examples: |
+    - phí ship như thế nào?
+    - tôi muốn biết về phí ship?
+    - tôi muốn hỏi về tiền ship?
+    - tiền ship bao nhiêu
+    - phí ship
+    - tiền ship
+    - tiền giao hàng
+    - phí giao hàng
+    - giao hàng đến địa chỉ mất bao nhiêu tiền
+    - tiền ship đến địa chỉ
+    - phí ship đến địa chỉ
+    - tiền giao hàng đến địa chỉ
+
 
 - intent: affirm
   examples: |
