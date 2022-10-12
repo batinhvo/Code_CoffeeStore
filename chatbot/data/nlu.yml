@@ -33,6 +33,62 @@ nlu:
     - bye bye
     - see you later
     - tạm biệt
+    - cảm ơn
+
+# - intent: Hoi_thong_tin_cf_hat
+#   examples: |
+#     - cà phê hạt là cà phê như thế nào?
+#     - tôi muốn biết thông tin về cà phê hạt?
+#     - thông tin cà phê hạt
+#     - biết về cà phê hạt
+#     - biết và phê hạt
+#     - hiểu về cà phê hạt
+
+- intent: Hoi_thuong_hieu
+  examples: |
+    - cửa hàng kinh doanh sản phẩm cửa thương hiệu nào
+    - thương hiệu sản phẩm
+    - thương hiệu
+    - cơ sở sản xuất
+
+- intent: Hoi_sdt
+  examples: |
+    - số điện thoại
+    - số điện thoại cửa hàng
+
+- intent: Hoi_dia_chi_cua_hang
+  examples: |
+    - cửa hàng mình ở đâu?
+    - shop ở đâu?
+    - vị trí cửa hàng
+    - vị trí shop
+    - địa chỉ 
+    - vị trí
+
+- intent: Hoi_nguon_goc
+  examples: |
+    - sản phẩm có nguồn gốc từ đâu?
+    - cà phê có nguồn gốc từ đâu
+    - nhập hàng ở đâu
+    - nguồn gốc
+    - nhập hàng
+
+- intent: Hoi_dung_cu_pha_che
+  examples: |
+    - dụng cụ pha chế nào?
+    - có loại máy pha cà phê không
+    - dụng cụ pha chế
+    - máy pha chế
+    - máy pha cà phê
+    - máy xay cà phê
+
+- intent: Hoi_cua_hang_ban_gi
+  examples: |
+    - cửa hàng có những loại sản phẩm nào?
+    - cửa hàng có những loại cà phê nào?
+    - có những loại hàng nào
+    - có những loại sản phẩm nào
+    - có những loại cà phê nào
 
 - intent: Hoi_cf_ban_chay
   examples: |
@@ -43,6 +99,7 @@ nlu:
     - mua nhiều nhất
     - sản phẩm nào ngon nhất
     - cà phê nào ngon nhất
+    - bán chạy nhất
 
 - intent: Hoi_san_pham_cf_rx
   examples: |
@@ -86,6 +143,15 @@ nlu:
     - phí ship đến địa chỉ
     - tiền giao hàng đến địa chỉ
 
+- intent: Hoi_ve_san_pham_khac
+  examples: |
+    - còn sản phẩm nào khác không?
+    - có sản phẩm nào nữa không?
+    - có sản phẩm tương tự không?
+    - còn loại nào nữa không?
+    - có loại nào khác không?
+    - sản phẩm khác?
+
 
 - intent: affirm
   examples: |
@@ -99,30 +165,19 @@ nlu:
 
 - intent: deny
   examples: |
-    - no
-    - n
-    - never
-    - I don't think so
-    - don't like that
-    - no way
-    - not really
+    - không
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - tôi không thích nó
 
 - intent: mood_great
   examples: |
-    - perfect
-    - great
-    - amazing
-    - feeling like a king
-    - wonderful
-    - I am feeling very good
-    - I am great
-    - I am amazing
-    - I am going to save the world
-    - super stoked
-    - extremely good
-    - so so perfect
-    - so good
-    - so perfect
+    - tốt
+    - hoàn hảo
+    - tôi rất thích nó
+    - tuyệt vời
+    - tôi cảm thấy rất tốt
+    - rất tốt
 
 - intent: mood_unhappy
   examples: |
@@ -147,3 +202,15 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+# - intent: Hoi_phim_co_khong
+#   examples: |
+#     - Rạp có phim [Lật Mặt](movie_name) này không?
+#     - [Lật Mặt](movie_name) có được chiếu ở rạp không?
+#     - Có phim [Bàn Tay Diệt Quỷ](movie_name) không?
+
+# - intent: ten_san_pham
+#   examples: |
+#     - sản phẩm [cà phê chất](product_name) có không?
+#     - [cà phê chất](product_name) có bán ở đây không?
+
