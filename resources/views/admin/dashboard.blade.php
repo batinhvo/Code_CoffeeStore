@@ -41,6 +41,39 @@
                         </div>
                     </div>
 </div>
-                 
+<div class="row">
+    <p class="title_Thongke" style="
+  font-weight: bold;
+    font-size: 20px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    color: currentColor;">BIỂU ĐỒ THỐNG KÊ DOANH SỐ</p>
+    <form autocomplete="off">
+        @csrf
+        <div class="col-md-2">
+            <p>Từ ngày: <input type="date" id="datepicker" class="form-control" require></p>
+            <input style="margin: 10px 10px 10px 10px;" type="button" id="btn-dashboard-filter" class="btn btn-primary" value="Lọc kết quả">
+        </div>
+        <div class="col-md-2">
+            <p>Đến ngày: <input type="date" id="datepicker2" class="form-control" require></p>
+        </div>
+        <div class="col-md-2">
+            <p>Lọc theo: 
+            <select class="dashboard-filter form-control" id="dashboard-filter">
+                <option style="text-align: center">>----- Chọn -----<</option>
+                <option value="7ngay">7 ngày qua</option>
+                <option value="thangtruoc">Tháng trước</option>
+                <option value="thangnay">Tháng này</option>
+                <option value="365ngayqua">365 ngày qua</option>
+            </select>    
+            </p>
+        </div>
+    </form>
+
+    <div class="col-md-12">
+        <div id="chart" style="height: 250px;"></div>
+    </div>
+</div>
+                  
                 
 @endsection

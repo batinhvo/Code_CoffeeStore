@@ -122,7 +122,7 @@
         </table>        
     </div>
 
-    <a class="btn btn-warning" href="{{URL::to('/manage-order/')}}">Trở về</a>
+    <!-- <a class="btn btn-warning" href="{{URL::to('/manage-order/')}}">Trở về</a> -->
 </div>
 <br><br>
 <div class="table-agile-info">

@@ -6,13 +6,8 @@ nlu:
     - hey
     - hello
     - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
     - hey there
     - let's go
-    - hey dude
     - goodmorning
     - goodevening
     - good afternoon
@@ -24,14 +19,11 @@ nlu:
 - intent: goodbye
   examples: |
     - good by
-    - cee you later
     - good night
     - bye
     - goodbye
-    - have a nice day
-    - see you around
     - bye bye
-    - see you later
+    - gặp lại sau
     - tạm biệt
     - cảm ơn
 
@@ -43,6 +35,15 @@ nlu:
 #     - biết về cà phê hạt
 #     - biết và phê hạt
 #     - hiểu về cà phê hạt
+
+- intent: Hoi_khong_noi_dung
+  examples: |
+    - abc
+    - xyz
+    - 123456789
+    - sfgdzfdhf
+    - ySFNHcb
+    - yuhbdnsmkxjkncbeifgdsjbzxc xmbvusgeflfmv xlvbdjvbelffn
 
 - intent: Hoi_thuong_hieu
   examples: |
@@ -89,6 +90,7 @@ nlu:
     - có những loại hàng nào
     - có những loại sản phẩm nào
     - có những loại cà phê nào
+    - shop bán loại cà phê nào
 
 - intent: Hoi_cf_ban_chay
   examples: |
@@ -152,7 +154,6 @@ nlu:
     - có loại nào khác không?
     - sản phẩm khác?
 
-
 - intent: affirm
   examples: |
     - yes
@@ -181,36 +182,24 @@ nlu:
 
 - intent: mood_unhappy
   examples: |
-    - my day was horrible
-    - I am sad
-    - I don't feel very well
-    - I am disappointed
-    - super sad
-    - I'm so sad
+    - ngày của tôi thật kinh khủng
+    - tôi cảm giác không tốt
+    - tôi thất vọng
+    - tôi rất buồn
     - sad
     - very sad
-    - unhappy
-    - not good
-    - not very good
-    - extremly sad
-    - so saad
-    - so sad
+    - không vui
+    - không tốt
+    - rất buồn
 
 - intent: bot_challenge
   examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-
-# - intent: Hoi_phim_co_khong
-#   examples: |
-#     - Rạp có phim [Lật Mặt](movie_name) này không?
-#     - [Lật Mặt](movie_name) có được chiếu ở rạp không?
-#     - Có phim [Bàn Tay Diệt Quỷ](movie_name) không?
-
+    - bạn là người máy hả?
+    - bạn có phải là con người không?
+    - tôi đang nói chuyện với một con robot?
+    - tôi đang nói chuyện với một con người?
+    
 # - intent: ten_san_pham
 #   examples: |
 #     - sản phẩm [cà phê chất](product_name) có không?
 #     - [cà phê chất](product_name) có bán ở đây không?
-

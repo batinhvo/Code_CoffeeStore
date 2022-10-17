@@ -20,6 +20,7 @@ intents:
   - Hoi_dia_chi_cua_hang
   - Hoi_sdt
   - Hoi_thuong_hieu
+  - Hoi_khong_noi_dung
   # - ten_san_pham
 
 # entities: 
@@ -37,6 +38,9 @@ intents:
 
 
 responses:
+  utter_khong_noi_dung:
+  - text: "Xin lỗi! tôi chưa hiểu ý của bạn!"
+
   utter_thong_tin_cf_hat:
   - text: "Cà phê hạt là cà phê thô, vẫn còn nguyên hạt chưa qua quá trình xay, giữ nguyên hương vị cà phê vốn có."
 
@@ -80,14 +84,15 @@ responses:
   - text: "Một số gợi ý sản phẩm cà phê hạt: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/35),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  # - text: "Here is something to cheer you up:"
+  #   image: "https://i.imgur.com/nGF1K8f.jpg"
+   - text: "Xin lỗi! tôi chưa hiểu ý của bạn!"
 
   utter_giup_do:
-  - text: "Tôi có thể giúp gì thêm cho bạn?"
+  - text: "Tôi có thể giúp gì cho bạn không?"
 
   utter_did_that_help:
-  - text: "Did that help you?"
+  - text: "Tôi có thể giúp gì cho bạn?"
 
   utter_happy:
   - text: "Great, carry on!"
@@ -96,7 +101,7 @@ responses:
   - text: "CoffeeStore trân trọng cảm ơn bạn đã quan tâm. Hẹn gặp lại!"
 
   utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+  - text: "Vâng. Tôi là robot."
 
 
 

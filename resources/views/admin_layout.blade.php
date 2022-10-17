@@ -297,21 +297,35 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
     
     $(document).ready(function() {
+        // chart30daysonder();
+        // var chart = new Morris.Bar({
+        // element: 'chart',
+        // lineColors: ['#819C79', '#fc8710', '#ff6541', '#A4AD03', '#766856'],
+        // parseTime: false,
+        // hideHover: 'auto',
+        // xkey:  'quantity',
+        // ykeys:['order','sales','profit',],
+        // // behaveLikeLine: true,
+        // labels: ['Đơn hàng','doanh số','lợi nhuận',]
+        
+        // });
+
+        chart30daysonder();
         new Morris.Bar({
         // ID of the element in which to draw the chart.
         element: 'chart',
         // Chart data records -- each entry in this array corresponds to a point on
         // the chart.
         data: [
-            // { y: 'Tháng 01', a: 350000},
-            // { y: 'Tháng 02', a: 1540000},
-            // { y: 'Tháng 03', a: 540000},
-            // { y: 'Tháng 04', a: 897500},
-            // { y: 'Tháng 05', a: 5642000},
-            // { y: 'Tháng 06', a: 120000},
-            // { y: 'Tháng 07', a: 650000},
-            { y: 'Tháng 08', a: 280000},
-            { y: 'Tháng 09', a: 1062000},
+            { y: 'Tháng 01', a: 350000},
+            { y: 'Tháng 02', a: 1540000},
+            { y: 'Tháng 03', a: 5400000},
+            { y: 'Tháng 04', a: 897500},
+            { y: 'Tháng 05', a: 5642000},
+            { y: 'Tháng 06', a: 1200000},
+            { y: 'Tháng 07', a: 650000},
+            { y: 'Tháng 08', a: 2800000},
+            { y: 'Tháng 09', a: 1562000},
             { y: 'Tháng 10', a: 8870000},
             { y: 'Tháng 11', a: 75},
             { y: 'Tháng 12', a: 50},
@@ -320,26 +334,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         ykeys: ['a'],
         labels: ['Doanh thu']
         });
-
-        // chart30daysonder();
-        // var chart = new Morris.Bar({
-        // element: 'chart',
-        // lineColors: ['#819C79', '#fc8710', '#ff6541', '#A4AD03', '#766856'],
-        // parseTime: false,
-        // hideHover: 'auto',
-        // data: [
-        //     { year: '2008', value: 20 },
-        //     { year: '2009', value: 10 },
-        //     { year: '2010', value: 5 },
-        //     { year: '2011', value: 5 },
-        //     { year: '2012', value: 20 }
-        // ],
-        // xkey:  'quantity',
-        // ykeys:['order','sales','profit',],
-        // // behaveLikeLine: true,
-        // labels: ['Đơn hàng','doanh số','lợi nhuận',]
-        
-        // });
 
         function chart30daysonder(){
             var _token = $('input[name="_token"]').val();
