@@ -39,7 +39,13 @@
                                     <label for="exampleInputEmail1">Password</label>
                                     <input required type="password" name="admin_password" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                                 </div>
-                                
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Chức vụ</label>
+                                    <select name="roles" class="form-control input-sm m-bot15">
+                                        <option value="1">Quản lý</option>
+                                        <option value="2">Nhân viên</option>
+                                    </select>
+                                </div>
                                 
                                 <button type="submit" name="add_manage" class="btn btn-info">Thêm Nhân Viên</button>
                             </form>

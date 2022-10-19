@@ -23,8 +23,10 @@ class CouponController extends Controller
         $coupon->coupon_condition=$data['coupon_condition'];
         $coupon->coupon_time=$data['coupon_time'];
         $coupon->coupon_code=$data['coupon_code'];
+        $coupon->coupon_code=$data['coupon_start'];
+        $coupon->coupon_code=$data['coupon_end'];
         $coupon->save();
-        Session::put('message','Thêm mã giảm giá thành công');
+        Session::put('message','Thêm mã giảm giá thành công');;
         return Redirect::to('all-coupon');
     
     }

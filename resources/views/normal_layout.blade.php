@@ -544,7 +544,7 @@
                 success: function(data) {
 
                     $('#notify_comment').html(
-                        '<p class="text text-success">Thêm bình luận thành công, Bình luận của bạn đang chờ duyệt</p>'
+                        '<p class="text text-success">Thêm bình luận thành công!</p>'
                     );
                     load_comment();
                     $('.comment_name').val('');

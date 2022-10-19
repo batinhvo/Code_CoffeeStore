@@ -143,10 +143,12 @@ class AdminController extends Controller
         $admin_email=$request->admin_email;
         $admin_password=md5($request->admin_password);
         $result= DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
+        $roles= DB::table('tbl_admin')->where('admin_email',$admin_email)->where('admin_password',$admin_password)->first();
         if($result){
             Session::put('admin_name',$result->admin_name);
             Session::put('admin_id',$result->admin_id);
             Session::put('admin_image',$result->admin_image);
+            Session::put('roles',$result->roles);
             return Redirect::to('/dashboard');
         }
         else {

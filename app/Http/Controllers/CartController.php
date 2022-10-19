@@ -74,7 +74,7 @@ class CartController extends Controller
         $data['options']['image']=$product_info->product_image;
         Cart::add($data);
         Cart::setGlobalTax(0);
-       // return Redirect::to('/show-cart');
+       return Redirect::to('/show-cart');
         // Cart::destroy();
     }
     public function show_cart(){

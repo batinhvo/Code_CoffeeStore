@@ -184,6 +184,14 @@ class CheckoutController extends Controller
         $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
         return view('pages.checkout.login_checkout')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('post',$post);
     }
+
+    public function login(){
+        $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
+        $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+        $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
+        return view('pages.checkout.login_checkout')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('post',$post);
+    }
+
     public function add_customer (Request $request){
         $data=array();
         $data['customer_name']=$request->customer_name;
@@ -229,11 +237,12 @@ class CheckoutController extends Controller
         if($result){
             Session::put('customer_id',$result->customer_id);
             Session::put('customer_name',$result->customer_name);
-        return Redirect('/checkout');
+        return Redirect('/trang-chu');
         }
         else return Redirect('/login-checkout');
         
     }
+
     public function payment(){
         $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
         $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();

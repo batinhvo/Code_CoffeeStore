@@ -42,9 +42,9 @@
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
             <td>
                 @if($com->comment_status==0)
-                    <input data-comment_status="0" data-comment_id="{{$com->comment_id}}" id="{{$com->comment_product_id}}" type="button" class="btn btn-xs btn-primary comment_duyet_btn" value="Duyệt bình luận">
+                    <input data-comment_status="0" data-comment_id="{{$com->comment_id}}" id="{{$com->comment_product_id}}" type="button" class="btn btn-xs btn-primary comment_duyet_btn" value="Hiện bình luận">
                 @else
-                <input data-comment_status="1" data-comment_id="{{$com->comment_id}}" id="{{$com->comment_product_id}}"  type="button" class="btn btn-xs btn-danger comment_duyet_btn" value="Bỏ Duyệt">
+                <input data-comment_status="1" data-comment_id="{{$com->comment_id}}" id="{{$com->comment_product_id}}"  type="button" class="btn btn-xs btn-danger comment_duyet_btn" value="Ẩn bình luận">
                 @endif
             </td>
             <td>{{$com->comment_name}}</td>

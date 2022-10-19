@@ -30,6 +30,8 @@ class AuthController extends Controller
         $data['product_prices']=$request->product_price;
         $data['address_product']=$request->address_product;
         $data['product_quanti']=$request->product_quantity;
+        $data['NSX']=$request->NSX;
+        $data['NHH']=$request->NHH;
         $data['create_at']= date('Y-m-d');
         $product_id=$request->product_id;
         $product_sl=DB::table('tbl_product')->where('product_id',$product_id)->get();
@@ -53,6 +55,8 @@ class AuthController extends Controller
         $data['product_prices']=$request->product_price;
         $data['address_product']=$request->address_product;
         $data['product_quanti']=$request->product_quantity;
+        $data['NSX']=$request->NSX;
+        $data['NHH']=$request->NHH;
         $data['create_update']= date('Y-m-d');
         $product_sl=DB::table('tbl_ware')->where('warehouse_id',$warehouse_id)->get();
         foreach($product_sl as $pro){
@@ -120,6 +124,10 @@ class AuthController extends Controller
         return Redirect::to('manage-warehouse');
     }
 
+    public function delete_admin($admin_id){
+        DB::table('tbl_admin')->where('admin_id',$admin_id)->delete();
+        return redirect()->back();
+    }
 
     public function add_manage(){
         $this->AuthLogin();
@@ -149,11 +157,10 @@ class AuthController extends Controller
             $get_name_image=$get_image->getClientOriginalName();
             $name_image=current(explode('.',$get_name_image));
             $new_image=$name_image.rand(0,999).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/admin/',$new_image);
+            // $get_image->move('public/uploads/admin/',$new_image);
             $admin->admin_image=$new_image;
         }
-        
-        
+        $admin->roles=$data['roles'];
         
         $admin->save();
         

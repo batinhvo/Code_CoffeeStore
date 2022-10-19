@@ -42,7 +42,14 @@
                                     <label for="exampleInputEmail1">Nhập số % hoặc tiền giảm</label>
                                     <input min="1" required type="number" name="coupon_number" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                                 </div>
-                            
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày bắt đầu</label>
+                                    <input required type="date" name="coupon_start" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày kết thúc</label>
+                                    <input required type="date" name="coupon_end" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
+                                </div>
                             
                                 
                                 <button type="submit" name="add_coupon" class="btn btn-info">Thêm mã giảm giá</button>

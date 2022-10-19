@@ -27,6 +27,8 @@
             <th>Địa chỉ lấy hàng</th>
             <th>Số lượng</th>
             <th>Đơn giá</th>
+            <th>Ngày sản xuất</th>
+            <th>Ngày hết hạn</th>
             <th>Ngày nhập</th>
             <th>Ngày cập nhật</th>
             <th>Tổng tiền</th>
@@ -41,10 +43,12 @@
             <td>{{$ware->brand_name}}</td>
             <td>{{$ware->address_product}}</td>
             <td>{{$ware->product_quanti}}</td>  
-            <td>{{number_format($ware->product_prices,0,',','.')}} đ</td>
+            <td>{{number_format($ware->product_prices,0,',','.')}}đ</td>
+            <td>{{$ware->NSX}}</td>
+            <td>{{$ware->NHH}}</td>
             <td>{{$ware->create_at}}</td>   
             <td>{{$ware->create_update}}</td> 
-            <td>{{number_format($ware->product_quanti * $ware->product_prices,0,',','.')}} đ</td>    
+            <td>{{number_format($ware->product_quanti * $ware->product_prices,0,',','.')}}đ</td>    
             <td>
               <a href="{{URL::to('/edit-warehouse/'.$ware->warehouse_id)}}" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
               <a onclick="return confirm('Bạn có chắc là muốn xóa đơn hàng này?')" href="{{URL::to('/delete-warehouse/'.$ware->warehouse_id)}}" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>

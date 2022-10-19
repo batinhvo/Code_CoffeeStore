@@ -57,6 +57,14 @@
                                     <label for="exampleInputEmail1">Số lượng</label>
                                     <input required type="number" name="product_quantity" class="form-control" id="exampleInputEmail1" value="{{$value->product_quanti}}">                                    
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày sản xuất</label>
+                                    <input required type="date" name="NSX" class="form-control" id="exampleInputEmail1" value="{{$value->NSX}}">                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày hết hạn</label>
+                                    <input required type="date" name="NHH" class="form-control" id="exampleInputEmail1" value="{{$value->NHH}}">                                    
+                                </div>
                                 <button type="submit" name="edit_warehouse" class="btn btn-info">Cập nhật đơn nhập</button>
                             </form>
                             </div>

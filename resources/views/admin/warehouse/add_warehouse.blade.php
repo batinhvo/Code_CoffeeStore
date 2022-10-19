@@ -49,6 +49,14 @@
                                     <label for="exampleInputEmail1">Số lượng</label>
                                     <input required type="number" name="product_quantity" class="form-control" id="exampleInputEmail1" placeholder="Số lượng">                                    
                                 </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày sản xuất</label>
+                                    <input required type="date" name="NSX" class="form-control" id="exampleInputEmail1" placeholder="NSX">                                    
+                                </div>
+                                <div class="form-group">
+                                    <label for="exampleInputEmail1">Ngày hết hạn</label>
+                                    <input required type="date" name="NHH" class="form-control" id="exampleInputEmail1" placeholder="NHH">                                    
+                                </div>
                                 <button type="submit" name="add_warehouse" class="btn btn-info">Thêm đơn nhập</button>
                             </form>
                             </div>

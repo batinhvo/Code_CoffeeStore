@@ -35,13 +35,17 @@
           <tr>
             <td><label class="i-checks m-b-none"><input type="checkbox" name="post[]"><i></i></label></td>
             <td>{{$ad->admin_name}}</td>
-            <td><img src="public/uploads/admin/{{$ad->admin_image}}" alt="" height="100" width="100"></td>
+            <td><img src="public/uploads/admin/avt143.webp" alt="" height="100" width="100"></td>
             <td>{{$ad->admin_email}}</td>
             <td>{{$ad->admin_phone}}</td>
            
             <!-- <td><span class="text-ellipsis">26.08.2000</span></td> -->
-           
+            <td>
+             
+              <a onclick="return confirm('Bạn có chắc là muốn xóa thông tin nhân viên này?')" href="{{URL::to('/delete-admin/'.$ad->admin_id)}}" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
+            </td>
           </tr>
+
          @endforeach
         </tbody>
       </table>

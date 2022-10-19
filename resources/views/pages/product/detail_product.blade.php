@@ -103,20 +103,33 @@
 					</form>
 
 					<p><b>Viết Đánh Giá</b></p>
-					
+					<?php
+						$customer_name = Session::get('customer_name');			
+					?>
 					<form action="#">
 						<span>
-							<input class="comment_name" style="width:100%; margin-left:0;" type="text" placeholder="Tên người bình luận"/>
+							<input class="comment_name" style="width:100%; margin-left:0;" type="text" placeholder="Tên người bình luận" value="{{$customer_name}}"/>
 							
 						</span>
 						<textarea placeholder="Nội dung bình luận" name="comment" class="comment_content"></textarea>
 						<div id="notify_comment">
-							
+						
 						</div>
+						<?php
+							$customer_id = Session::get('customer_id');
+							if($customer_id!=NULL){			
+						?>
 						<!-- <b>Đánh giá sao: </b> <img src="images/product-details/rating.png" alt="" /> -->
 						<button type="button" class="btn btn-default pull-right send-comment">
 							Gửi bình luận
 						</button>
+						<?php
+						}else{ 	?>
+							<a onclick="return confirm('Bạn cần phải ĐĂNG NHẬP hoặc ĐĂNG KÝ TÀI KHOẢN để có thể bình luận sản phẩm!')" href="{{URL::to('/login-checkout')}}"><i class="fa fa-times"></i>
+							<button type="button" class="btn btn-default pull-right">
+							Gửi bình luận
+						</button></a>
+						<?php }?>
 						
 					</form>
 				</div>

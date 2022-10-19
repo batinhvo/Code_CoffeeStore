@@ -117,7 +117,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                         </li>
 
-                        <li class="sub-menu">
+                        <!-- <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
                                 <span>Slider</span>
@@ -130,7 +130,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="{{URL::to('/manage-banner')}}">Liệt Kê Slider</a></li>
 
                             </ul>
-                        </li>
+                        </li> -->
 
                         <li class="sub-menu">
                             <a href="javascript:;">
@@ -249,6 +249,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
                             </ul>
                         </li>
+                        <?php
+                            $roles=Session::get('roles');
+                         ?>
+                        @if($roles == 1)
                         <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
@@ -259,7 +263,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="{{URL::to('/all-manage')}}">Liệt kê Nhân Viên</a></li>
                             </ul>
                         </li>
-
+                        @endif
                     </ul>
                 </div>
                 <!-- sidebar menu end-->
@@ -398,9 +402,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         // alert(comment_id);
         // alert(comment_product_id);
         if (comment_status == 0) {
-            var alert = 'Duyệt bình luận thành công';
+            var alert = 'Hiện bình luận thành công';
         } else {
-            var alert = 'Bỏ duyệt bình luận thành công';
+            var alert = 'Ẩn bình luận thành công';
         }
         $.ajax({
             url: '{{url('/allow-comment')}}',

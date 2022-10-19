@@ -61,7 +61,7 @@ class ProductController extends Controller
         $comment->comment_name=$comment_name;
         $comment->comment=$comment_content;
         $comment->comment_product_id=$product_id;
-        $comment->comment_status=0;
+        $comment->comment_status=1;
         $comment->comment_parent_id=0;
         $comment->save();
     }
@@ -91,7 +91,7 @@ class ProductController extends Controller
                                 <div class="row style_comment reply_comment" style="margin:5px 40px; background:#f7cce8;">
                                             <div class="col-md-2">
                                                 
-                                                <img width="100%" src="'.url('/public/frontend/images/admin.jpg').'" alt="" class="img img-responsive img-thumbnail">
+                                                <img width="100%" src="'.url('/public/frontend/images/logo.png').'" alt="" class="img img-responsive img-thumbnail">
                                             </div>
                                             <div class="col-md-10">
                                                 <p style="color:green;">Admin</p>
@@ -121,7 +121,7 @@ class ProductController extends Controller
         $this->AuthLogin();
         $all_product=DB::table('tbl_product')
         ->join('tbl_category_product','tbl_category_product.category_id','=','tbl_product.category_id')
-        ->join('tbl_brand','tbl_brand.brand_id','=','tbl_product.brand_id')->orderby('product_id','desc')->paginate(10);
+        ->join('tbl_brand','tbl_brand.brand_id','=','tbl_product.brand_id')->orderby('product_id','desc')->paginate(20);
         $manager_product=view('admin.product.all_product')->with('all_product',$all_product);
         return view('admin_layout')->with('admin.product.all_product',$manager_product);
     }

@@ -9,7 +9,7 @@ class Coupon extends Model
 {
     public $timestamps=false;
     protected $fillable=[
-        'coupon_code','coupon_name','coupon_time','coupon_number','coupon_condition'
+        'coupon_code','coupon_name','coupon_time','coupon_number','coupon_condition','coupon_start','coupon_end'
     ];
     protected $primaryKey='coupon_id';
     protected $table='tbl_coupon';

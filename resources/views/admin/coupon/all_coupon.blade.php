@@ -27,6 +27,8 @@
             <th>Số lượng giảm giá</th>
             <th>Điều kiện giảm giá</th>
             <th>Số giảm</th>
+            <th>Ngày bắt đầu</th>
+            <th>Ngày kết thúc</th>
             <!-- <th>Ngày thêm</th> -->
             <th style="width:30px;"></th>
           </tr>
@@ -62,6 +64,8 @@
                 <?php
               }?>
             </span></td>
+            <td>{{$cou->coupon_start}}</td>
+            <td>{{$cou->coupon_end}}</td>
             <!-- <td><span class="text-ellipsis">26.08.2000</span></td> -->
             <td>
               <!-- <a href="{{URL::to('/edit-coupon/'.$cou->coupon_id)}}" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a> -->
