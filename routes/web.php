@@ -155,6 +155,8 @@ Route::get('/all-manage','App\Http\Controllers\AuthController@all_manage');
 Route::get('/register-auth','App\Http\Controllers\AuthController@register_auth');
 Route::post('/register','App\Http\Controllers\AuthController@register');
 Route::get('/delete-admin/{admin_id}','App\Http\Controllers\AuthController@delete_admin');
+Route::get('/unactive-admin/{admin_id}','App\Http\Controllers\AuthController@unactive_admin');
+Route::get('/active-admin/{admin_id}','App\Http\Controllers\AuthController@active_admin');
 
 //warehouse
 Route::post('/save-warehouse','App\Http\Controllers\AuthController@save_warehouse');

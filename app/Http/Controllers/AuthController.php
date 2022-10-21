@@ -140,6 +140,29 @@ class AuthController extends Controller
         return view('admin.manage.all_manage')->with(compact('admin'));
     }
 
+    public function active_admin($admin_id){
+        $this->AuthLogin();
+        if($admin_id == 1){
+            Session::put('message','Không thể thay đổi tài khoản này!!!');
+            return redirect()->back();
+        }else{
+            DB::table('tbl_admin')->where('admin_id',$admin_id)->update(['roles'=>1]);
+            return redirect()->back();
+        }
+        
+    }
+
+    public function unactive_admin($admin_id){
+        $this->AuthLogin();
+        if($admin_id == 1){
+            Session::put('message','Không thể thay đổi tài khoản này!!!');
+            return redirect()->back();
+        }else{
+            DB::table('tbl_admin')->where('admin_id',$admin_id)->update(['roles'=>2]);
+            return redirect()->back();
+        }
+    }
+
     public function register_auth(){
         $this->AuthLogin();
         return view('admin.custom_auth.register');

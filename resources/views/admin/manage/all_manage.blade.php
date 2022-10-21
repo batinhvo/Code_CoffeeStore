@@ -26,7 +26,7 @@
             <th>Hình nhân viên</th>
             <th>Email</th>
             <th>Điện Thoại</th>
-            <!-- <th>Ngày thêm</th> -->
+            <th>Vai trò</th>
             <th style="width:30px;"></th>
           </tr>
         </thead>
@@ -38,7 +38,21 @@
             <td><img src="public/uploads/admin/avt143.webp" alt="" height="100" width="100"></td>
             <td>{{$ad->admin_email}}</td>
             <td>{{$ad->admin_phone}}</td>
-           
+            <td><span class="text-ellipsis">
+              <?php
+                if($ad->roles==1){
+                ?>   
+                  <a onclick="return confirm('Bạn có chắc là muốn thay đổi tài khoản này từ Quản lý->Nhân viên ?')" href="{{URL::to('/unactive-admin/'.$ad->admin_id)}}">
+                  <input type="button" class="btn btn-xs btn-primary comment_duyet_btn" value="Quản lý">
+                  </a>
+               <?php }else {
+               ?>  
+                <a onclick="return confirm('Bạn có chắc là muốn thay đổi tài khoản này từ Nhân viên->Quản lý ?')" href="{{URL::to('/active-admin/'.$ad->admin_id)}}">
+                  <input type="button" class="btn btn-xs btn-primary comment_duyet_btn" value="Nhân viên">
+                </a>
+                <?php
+              }?>
+            </span></td>
             <!-- <td><span class="text-ellipsis">26.08.2000</span></td> -->
             <td>
              
