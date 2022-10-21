@@ -31,6 +31,40 @@ class DeliveryController extends Controller
       
         return view('admin.delivery.add_delivery')->with(compact('city'));
     }
+
+    public function all_delivery(){
+        $this->AuthLogin();
+        $delivery=DB::table('tbl_feeship')->orderby('fee_id','desc')->get();
+        $city=DB::table('tbl_tinhthanhpho')->orderby('matp','desc')->get();
+        $xa=DB::table('tbl_xaphuongthitran')->orderby('xaid','desc')->get();
+        $town=DB::table('tbl_quanhuyen')->orderby('maqh','desc')->get();
+        return view('admin.delivery.all_delivery')->with(compact('delivery'))->with(compact('city'))->with(compact('town'))->with(compact('xa'));
+    }
+
+    public function edit_delivery($fee_id){
+        $this->AuthLogin();
+        $delivery=DB::table('tbl_feeship')->where('fee_id',$fee_id)->get();
+        foreach($delivery as $deli){
+            $ci=$deli->fee_matp;
+            $qh=$deli->fee_maqh;
+            $xaid=$deli->fee_maxp;
+        }
+
+        $city=DB::table('tbl_tinhthanhpho')->where('matp',$ci)->get();
+        $xa=DB::table('tbl_xaphuongthitran')->where('xaid',$xaid)->get();
+        $town=DB::table('tbl_quanhuyen')->where('maqh',$qh)->get();
+        return view('admin.delivery.edit_delivery')->with(compact('delivery'))->with(compact('city'))->with(compact('town'))->with(compact('xa'));
+    }
+
+    public function update_deliverys(Request $request,$fee_id){
+        $this->AuthLogin();
+       $data=array();
+       $data['fee_ship']=$request->fee_ship;
+       DB::table('tbl_feeship')->where('fee_id',$fee_id)->update($data);
+       Session::put('message','Cập nhật phí vận chuyển thành công');
+       return Redirect::to('all-delivery');
+    }
+
     public function select_delivery(Request $request){
         $data=$request->all();
         if($data['action']){
@@ -96,11 +130,11 @@ class DeliveryController extends Controller
         ';
         echo $output;
     }
-    public function update_delivery(Request $request){
-        $data=$request->all();
-        $fee_ship = Feeship::find($data['feeship_id']);
-        $fee_value=rtrim($data['fee_value'],'.');
-        $fee_ship->fee_ship=$fee_value;
-        $fee_ship->save();
-    }
+    // public function update_delivery(Request $request){
+    //     $data=$request->all();
+    //     // $fee_ship = Feeship::find($data['feeship_id']);
+    //     $fee_value=rtrim($data['fee_value'],'.');
+    //     $fee_ship->fee_ship=$fee_value;
+    //     $fee_ship->save();
+    // }
 }

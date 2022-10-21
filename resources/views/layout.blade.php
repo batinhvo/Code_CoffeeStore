@@ -36,7 +36,7 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> 0123456789</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> 0911265883</a></li>
 								<li><a href="#"><i class="fa fa-envelope"></i> batinh@gmail.com</a></li>
 							</ul>
 						</div>
@@ -128,7 +128,7 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li><a href="{{URL::to('/trang-chu')}}" class="active">Trang chủ</a></li>
-								<li><a href="#">Sản phẩm<i></i></a>
+								<li><a href="{{URL::to('/all-product-page')}}">Sản phẩm<i></i></a>
                                     <!-- <ul role="menu" class="sub-menu">
                                         <li><a href="shop.html">Products</a></li>
 										<li><a href="product-details.html">Product Details</a></li> 

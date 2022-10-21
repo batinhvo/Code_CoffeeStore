@@ -48,7 +48,7 @@ responses:
   - text: "CoffeeStore đang kinh doanh những sản phẩm của các thương hiệu như: [Cà phê Trung Nguyên](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/10), [90S coffee Việt Nam](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/14), [LeeLong coffee](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/13), [Vina Cafe](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12), [Coffee Highlands](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12)."
 
   utter_sdt:
-  - text: "Số điện thoại cửa hàng là 0123456789"
+  - text: "Số điện thoại cửa hàng là 0911265883"
 
   utter_dia_chi_cua_hang:
   - text: "Địa chỉ cửa hàng nằm ở số 13 Đường Trần Bạch Đằng, P.An Khánh, Q.Ninh Kiều, TP.Cần Thơ"

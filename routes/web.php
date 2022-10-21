@@ -20,6 +20,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/','App\Http\Controllers\HomeController@index');
 Route::get('/trang-chu','App\Http\Controllers\HomeController@index');
 Route::post('tim-kiem','App\Http\Controllers\HomeController@search');
+Route::get('/all-product-page','App\Http\Controllers\HomeController@all_product');
 Route::post('/autocomplete-ajax','App\Http\Controllers\HomeController@autocomplete_ajax');
 
 //Danh mục sản phẩm trang chủ
@@ -136,6 +137,9 @@ Route::post('/select-delivery','App\Http\Controllers\DeliveryController@select_d
 Route::post('/insert-delivery','App\Http\Controllers\DeliveryController@insert_delivery');
 Route::post('/select-feeship','App\Http\Controllers\DeliveryController@select_feeship');
 Route::post('/update-delivery','App\Http\Controllers\DeliveryController@update_delivery');
+Route::get('/all-delivery','App\Http\Controllers\DeliveryController@all_delivery');
+Route::get('/edit-delivery/{fee_id}','App\Http\Controllers\DeliveryController@edit_delivery');
+Route::post('/update-deliverys/{fee_id}','App\Http\Controllers\DeliveryController@update_deliverys');
 
 //Banner
 Route::get('/manage-banner','App\Http\Controllers\SliderController@manage_banner');
