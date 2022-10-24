@@ -189,16 +189,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="{{URL::to('/all-category-product')}}">Liệt kê danh mục sản phẩm</a></li>
                             </ul>
                         </li>
-                        <li class="sub-menu">
-                            <a href="javascript:;">
-                                <i class="fa fa-book"></i>
-                                <span>Bình luận</span>
-                            </a>
-                            <ul class="sub">
-
-                                <li><a href="{{URL::to('/all-comment')}}">Liệt kê bình luận</a></li>
-                            </ul>
-                        </li>
+                        
                         <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
@@ -220,7 +211,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             </ul>
                         </li>
 
-                        <li class="sub-menu">
+                        <!-- <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
                                 <span>Danh Mục Bài Viết</span>
@@ -233,9 +224,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li><a href="{{URL::to('/all-post')}}">Liệt Kê Danh Mục Bài Viết</a></li>
 
                             </ul>
-                        </li>
+                        </li> -->
 
-                        <li class="sub-menu">
+                        <!-- <li class="sub-menu">
                             <a href="javascript:;">
                                 <i class="fa fa-book"></i>
                                 <span>Bài Viết</span>
@@ -247,6 +238,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                             <ul class="sub">
                                 <li><a href="{{URL::to('/all-new-feed')}}">Liệt Kê Bài Viết</a></li>
 
+                            </ul>
+                        </li> -->
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Bình luận</span>
+                            </a>
+                            <ul class="sub">
+
+                                <li><a href="{{URL::to('/all-comment')}}">Liệt kê bình luận</a></li>
                             </ul>
                         </li>
                         <?php

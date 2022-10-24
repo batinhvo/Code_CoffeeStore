@@ -22,7 +22,7 @@
 									<input required class="shipping_name"  name="ship_name"  type="text" value="{{$cus->customer_name}}">
 									<input required class="shipping_phone"  name="ship_phone" type="text" value="{{$cus->customer_phone}}">
 									@endforeach
-									<input required class="shipping_address"   name="ship_address" type="text" placeholder="Địa chỉ">
+									<input required class="shipping_address"   name="ship_address" type="text" value="{{$shipping_address}}">
                                     <textarea required class="shipping_notes"   name="ship_note"  placeholder="Ghi chú đơn hàng của bạn" rows="7"></textarea>
 									@if(Session::get('fee'))
 										<input required value="{{Session::get('fee')}}" class="order_fee"  name="order_fee" type="hidden" placeholder="Địa chỉ">

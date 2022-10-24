@@ -45,13 +45,10 @@
                 <thead>
                     <tr>
                         <th>Số thứ tự</th>
-
                         <th>Mã đơn hàng</th>
                         <th>Ngày đặt hàng </th>
                         <th>Tình trạng đơn hàng</th>
-                       
                         <td>Tổng tiền</td>
-
                         <!-- <th>Ngày thêm</th> -->
                         <th style="width:30px;"></th>
                     </tr>

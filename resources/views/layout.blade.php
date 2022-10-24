@@ -70,7 +70,16 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 							
-								<li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
+							<?php
+                                $customer_id = Session::get('customer_id');
+                                if($customer_id!=NULL){
+                            ?>
+                                <li><a href="{{URL::to('/lichsu/'.$customer_id)}}"><i class="fa fa-star"></i> Lịch sử mua hàng</a></li>
+                            <?php
+                                }else{ 	?>
+                            <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Lịch sử mua hàng</a></li>
+                            <?php }?>
+
 								<?php
 									$customer_id = Session::get('customer_id');
 									$shipping_id = Session::get('shipping_id');

@@ -27,7 +27,7 @@
                                     <input required type="number" name="product_price" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Số lượng tồn</label>
+                                    <label for="exampleInputEmail1">Số lượng nhập</label>
                                     <input required type="number" name="product_quantity" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
                                 </div>
                                 <div class="form-group">
@@ -35,8 +35,7 @@
                                     <input required type="file" name="product_image" class="form-control" id="exampleInputEmail1">
                                 </div>
                                 <div class="form-group">
-                                    <label for="exampleInputEmail1">Số lượng đã bán</label>
-                                    <input required type="number" name="product_sold" class="form-control" id="exampleInputEmail1" placeholder="Tên danh mục">
+                                    <input required type="hidden" name="product_sold" class="form-control" id="exampleInputEmail1" value="0">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputPassword1">Mô tả sản phẩm</label>

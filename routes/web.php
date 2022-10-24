@@ -22,6 +22,8 @@ Route::get('/trang-chu','App\Http\Controllers\HomeController@index');
 Route::post('tim-kiem','App\Http\Controllers\HomeController@search');
 Route::get('/all-product-page','App\Http\Controllers\HomeController@all_product');
 Route::post('/autocomplete-ajax','App\Http\Controllers\HomeController@autocomplete_ajax');
+Route::get('/lichsu/{customer_id}','App\Http\Controllers\HomeController@lichsu');
+Route::get('/chitiet-lichsu/{order_id}','App\Http\Controllers\HomeController@chitiet_lichsu');
 
 //Danh mục sản phẩm trang chủ
 Route::get('/danh-muc-san-pham/{category_id}','App\Http\Controllers\CategoryProduct@show_category_home');
@@ -116,6 +118,9 @@ Route::get('/statistical','App\Http\Controllers\OrderController@statistical');
 Route::get('/view-order/{order_id}','App\Http\Controllers\OrderController@view_order');
 Route::get('/filter-order/{order_status}','App\Http\Controllers\OrderController@filter_order');
 Route::post('/update-order-quantity','App\Http\Controllers\OrderController@update_order_quantity');
+
+
+
 
 //send mail
 Route::get('send-mail','App\Http\Controllers\HomeController@send_mail');

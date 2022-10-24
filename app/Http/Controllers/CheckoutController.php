@@ -20,13 +20,17 @@ session_start();
 class CheckoutController extends Controller
 {
     public function info_delivery(){
+        $city=City::where('matp',Session::get('matp'))->first();
+        $province=Province::where('maqh',Session::get('maqh'))->first();
+        $wards=Wards::where('xaid',Session::get('maxp'))->first();
         
+        $shipping_address= $wards->name_xaphuong.', '.$province->name_quanhuyen.', '.$city->name_thanhpho;
         $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
         $category_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
         $brand_product = DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
         $customer_id = Session::get('customer_id');
         $customer = DB::table('tbl_customer')->where('customer_id', $customer_id)->get();
-        return view('pages.checkout.delivery')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('post',$post)->with('customer',$customer);
+        return view('pages.checkout.delivery')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('post',$post)->with('customer',$customer)->with('shipping_address',$shipping_address);
     //    $customer_id = Session::get('customer_id');
     //    echo '<pre>';
     //     print_r($request);
@@ -40,7 +44,7 @@ class CheckoutController extends Controller
         $wards=Wards::where('xaid',Session::get('maxp'))->first();
         
         
-        $shipping_address=$data['shipping_address'].', '. $wards->name_xaphuong.', '.$province->name_quanhuyen.', '.$city->name_thanhpho;
+        $shipping_address=$data['shipping_address'];
         $shipping=new Shipping ();
         $shipping->shipping_name=$data['shipping_name'];
         $shipping->shipping_email=$data['shipping_email'];

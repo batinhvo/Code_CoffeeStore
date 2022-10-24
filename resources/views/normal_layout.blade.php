@@ -81,15 +81,26 @@
                     <div class="col-sm-8">
                         <div class="shop-menu pull-right">
                             <ul class="nav navbar-nav">
+                            <?php
+                                $customer_id = Session::get('customer_id');
+                                if($customer_id!=NULL){
+                            ?>
+                                <li><a href="{{URL::to('/lichsu/'.$customer_id)}}"><i class="fa fa-star"></i> Lịch sử mua hàng</a></li>
+                            <?php
+                                }else{ 	?>
+                            <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Lịch sử mua hàng</a></li>
+                            <?php }?>
 
-                                <li><a href="#"><i class="fa fa-star"></i> Yêu thích</a></li>
+
                                 <?php
 									$customer_id = Session::get('customer_id');
 									$shipping_id = Session::get('shipping_id');
 									if($customer_id!=NULL && $shipping_id==Null){
-										
-									
 								?>
+
+
+
+
                                 <li><a href="{{URL::to('/checkout')}}"><i class="fa fa-crosshairs"></i> Thanh toán</a>
                                 </li>
                                 <?php
@@ -111,8 +122,6 @@
 									$customer_id = Session::get('customer_id');
 									$customer_name=Session::get('customer_name');
 									if($customer_id!=NULL){
-										
-									
 								?>
 
 

@@ -301,10 +301,10 @@
           </td>
         </tr>
         <tr>
-          <td>
-            <a class="btn btn-warning" target="blank" href="{{URL('/print-order/'.$or_detail->order_id)}}"><i class="fa fa-print"> In đơn hàng</i> </a>
-          </td>
-          <td colspan="3">
+          <!-- <td> -->
+            <!-- <a class="btn btn-warning" target="blank" href="{{URL('/print-order/'.$or_detail->order_id)}}"><i class="fa fa-print"> In đơn hàng</i> </a> -->
+          <!-- </td> -->
+          <td colspan="2">
             <a class="btn btn-danger" href="{{URL::to('/manage-order/')}}">Trở về</a>
           </td>
         </tr>

@@ -11,6 +11,7 @@ use App\Models\Slider;
 use App\Models\Post;
 use App\Models\Product;
 use App\Models\CategoryPost;
+use App\Models\Coupon;
 use Illuminate\Support\Facades\Redirect;
 session_start();
 class HomeController extends Controller
@@ -57,6 +58,62 @@ class HomeController extends Controller
         return view('pages.home')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('all_product',$all_product)
         ->with('slider',$slider)->with('post',$post);
     }
+
+    public function lichsu($customer_id){
+        $slider=Slider::where('slider_status',1)->orderBy('slider_id','DESC')->get();
+        $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
+        $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+        $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
+        $all_product=DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->paginate(6);
+        $order=DB::table('tbl_order')->where('customer_id',$customer_id)->get();
+        return view('pages.checkout.lichsu')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('all_product',$all_product)
+        ->with('slider',$slider)->with('post',$post)->with('order',$order);
+    }
+
+    public function chitiet_lichsu($order_id){
+        $slider=Slider::where('slider_status',1)->orderBy('slider_id','DESC')->get();
+        $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
+        $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+        $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
+        $all_product=DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->paginate(6);
+        $order=DB::table('tbl_order')->where('order_id',$order_id)->get();
+        foreach($order as $ord){
+            $customer_id = $ord->customer_id;
+            $shipping_id = $ord->shipping_id;
+        }
+              
+
+        $order=DB::table('tbl_order')->where('order_id',$order_id)->get();
+        foreach($order as $key=> $ord){
+            $customer_id=$ord->customer_id;
+            $shipping_id=$ord->shipping_id;
+        }
+        $shipping=DB::table('tbl_shipping')->where('shipping_id',$shipping_id)->get();
+        $customer=DB::table('tbl_customer')->where('customer_id',$customer_id)->get();
+        $order_details=DB::table('tbl_order')  
+        ->join('tbl_order_detail','tbl_order_detail.order_id','=','tbl_order.order_id')
+        ->join('tbl_product','tbl_order_detail.product_id','=','tbl_product.product_id')
+        ->where('tbl_order.order_id',$order_id)
+        ->select('tbl_order_detail.*','tbl_product.product_price as pro_price','product_image')
+        ->get();
+        foreach($order_details as $key => $order_d){
+            $product_coupon=$order_d->product_coupon;
+        }
+        if($product_coupon!='0'){
+            $coupon=Coupon::where('coupon_code',$product_coupon)->first();
+            $coupon_condition=$coupon->coupon_condition;
+            $coupon_number=$coupon->coupon_number;
+        }
+        else{
+            $coupon_condition=2;
+            $coupon_number=0;
+        }
+
+        return view('pages.checkout.chitiet_lichsu')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('all_product',$all_product)
+        ->with('slider',$slider)->with('post',$post)->with('order',$order)->with('customer',$customer)->with('shipping',$shipping)->with('order_details',$order_details)
+        ->with('coupon_number',$coupon_number)->with('coupon_condition',$coupon_condition);
+    }
+
 
     public function all_product(){
         $slider=Slider::where('slider_status',1)->orderBy('slider_id','DESC')->get();
