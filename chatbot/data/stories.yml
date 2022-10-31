@@ -9,11 +9,35 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
-# - story: Hỏi thông tin cà phê hạt
-#   steps:
-#   - intent: Hoi_thong_tin_cf_hat
-#   - action: utter_thong_tin_cf_hat
-#   - action: utter_hat
+- story: Hỏi thương hiệu trung nguyên
+  steps:
+  - intent: Hoi_th_trung_nguyen
+  - action: utter_th_trung_nguyen
+
+- story: Hỏi thương hiệu leelong
+  steps:
+  - intent: Hoi_th_leelong
+  - action: utter_th_leelong
+
+- story: Hỏi thương hiệu vinacafe
+  steps:
+  - intent: Hoi_th_vinacafe
+  - action: utter_th_vinacafe
+
+- story: Hỏi thương hiệu 90S
+  steps:
+  - intent: Hoi_th_90s
+  - action: utter_th_90S
+
+- story: Hỏi thương hiệu highlands
+  steps:
+  - intent: Hoi_th_highlands
+  - action: utter_th_highlands
+
+- story: Hỏi thương hiệu lelit
+  steps:
+  - intent: Hoi_th_lelit
+  - action: utter_th_lelit
 
 - story: Hỏi không nội dung
   steps:
@@ -25,7 +49,7 @@ stories:
 - story: Hỏi thương hiệu
   steps:
   - intent: Hoi_thuong_hieu
-  - action: utter_thuong_hieu
+  - action: utter_thuong_hieu 
 
 - story: Hỏi sdt
   steps:
@@ -98,6 +122,15 @@ stories:
   - action: utter_ve_san_pham_khac
   - intent: goodbye
   - action: utter_goodbye
+
+- story: kich ban ht
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Hoi_san_pham_cf_ht
+  - action: utter_ht
+  - intent: Hoi_ve_san_pham_khac
+  - action: utter_ht_khac
 
 
 

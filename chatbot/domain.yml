@@ -21,7 +21,12 @@ intents:
   - Hoi_sdt
   - Hoi_thuong_hieu
   - Hoi_khong_noi_dung
-  # - ten_san_pham
+  - Hoi_th_leelong
+  - Hoi_th_trung_nguyen
+  - Hoi_th_vinacafe
+  - Hoi_th_highlands
+  - Hoi_th_90s
+  - Hoi_th_lelit
 
 # entities: 
 # - product_name                                          
@@ -44,6 +49,24 @@ responses:
   utter_thong_tin_cf_hat:
   - text: "Cà phê hạt là cà phê thô, vẫn còn nguyên hạt chưa qua quá trình xay, giữ nguyên hương vị cà phê vốn có."
 
+  utter_th_trung_nguyen:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu Trung Nguyên mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/10)"
+
+  utter_th_90S:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu 90S COFFEE VIỆT NAM mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/14)"
+
+  utter_th_leelong:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu LEELONG COFFEE mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/13)"
+
+  utter_th_vinacafe:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu VINACAFE mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12)"
+
+  utter_th_highlands:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu CAFE HIGHLANDS mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/11)"
+
+  utter_th_lelit:
+  - text: "Bạn có thể xem các sản phẩm của thương hiệu LELIT mà CoffeeStore đang kinh doanh\n[Tại đây.](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/15)"
+
   utter_thuong_hieu:
   - text: "CoffeeStore đang kinh doanh những sản phẩm của các thương hiệu như: [Cà phê Trung Nguyên](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/10), [90S coffee Việt Nam](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/14), [LeeLong coffee](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/13), [Vina Cafe](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12), [Coffee Highlands](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12)."
 
@@ -57,16 +80,16 @@ responses:
   - text: "Sản phẩm được lấy từ các các cơ sở sản xuất uy tính tại Việt Nam. Mang trọn vẹn hương vị cà phê Việt nguyên bản nhất."
 
   utter_dung_cu_pha_che:
-  - text: "Một số dụng cụ pha chế CoffeeStore đang kinh doanh: [Máy xay cà phê Grinta](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/38), [Máy pha cafe Anita PL042EMI](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/37). Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số dụng cụ pha chế CoffeeStore đang kinh doanh: [Máy xay cà phê Grinta](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/38), [Máy pha cafe Anita PL042EMI](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/37).\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_cua_hang_ban_gi:
-  - text: "Những loại sản phẩm CoffeeStore đang kinh doanh: [Cà phê hòa tan](http://localhost/Code_CoffeeStore/danh-muc-san-pham/12), [Cà phê rang xay](http://localhost/Code_CoffeeStore/danh-muc-san-pham/8), [Cà phê hạt nguyên chất](http://localhost/Code_CoffeeStore/danh-muc-san-pham/11), [Dụng cụ pha chế cà phê](http://localhost/Code_CoffeeStore/danh-muc-san-pham/9). Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Những loại sản phẩm CoffeeStore đang kinh doanh: [Cà phê hòa tan](http://localhost/Code_CoffeeStore/danh-muc-san-pham/12), [Cà phê rang xay](http://localhost/Code_CoffeeStore/danh-muc-san-pham/8), [Cà phê hạt nguyên chất](http://localhost/Code_CoffeeStore/danh-muc-san-pham/11), [Dụng cụ pha chế cà phê](http://localhost/Code_CoffeeStore/danh-muc-san-pham/9).\nBạn có thể xem thông tin chi tiết khi click vào tên danh mục."
 
   utter_ve_san_pham_khac:
-  - text: "Bạn có thể xem thêm nhiều sản phẩm khác trong mục SẢN PHẨM của cửa hàng."
+  - text: "Bạn có thể xem thêm nhiều sản phẩm khác trong mục [SẢN PHẨM](http://localhost/Code_CoffeeStore/all-product-page) của cửa hàng."
 
   utter_cf_ban_chay:
-  - text: "Một số gợi ý sản phẩm cà phê được mua nhiều nhất: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số gợi ý sản phẩm cà phê được mua nhiều nhất: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_phi_ship:
   - text: "Phí giao hàng trong khoảng từ 30000đ-50000đ. Bạn có thể biết rõ về khoảng tiền giao hàng khi tiến hành đặt hàng."
@@ -75,13 +98,16 @@ responses:
   - text: "Xin chào! CoffeeStore có thể giúp gì cho bạn?"
 
   utter_rx:
-  - text: "Một số gợi ý sản phẩm cà phê rang xay: [Cà phê số 5 Dịu](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/39), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số gợi ý sản phẩm cà phê rang xay: [Cà phê số 5 Dịu](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/39), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_ht:
-  - text: "Một số gợi ý sản phẩm cà phê hòa tan: [Cafe Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/31), [cà phê 3 in 1 GOLD](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/30),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số gợi ý sản phẩm cà phê hòa tan: [Cafe Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/31), [cà phê 3 in 1 GOLD](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/30),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+
+  utter_ht_khac:
+  - text: "Một số gợi ý sản phẩm cà phê hòa tan: [Cà phê G7-Hoà tan đen Trung Nguyên](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/27),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_hat:
-  - text: "Một số gợi ý sản phẩm cà phê hạt: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/35),... Bạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số gợi ý sản phẩm cà phê hạt: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/35),... \nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_cheer_up:
   # - text: "Here is something to cheer you up:"

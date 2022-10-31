@@ -27,14 +27,48 @@ nlu:
     - tạm biệt
     - cảm ơn
 
-# - intent: Hoi_thong_tin_cf_hat
-#   examples: |
-#     - cà phê hạt là cà phê như thế nào?
-#     - tôi muốn biết thông tin về cà phê hạt?
-#     - thông tin cà phê hạt
-#     - biết về cà phê hạt
-#     - biết và phê hạt
-#     - hiểu về cà phê hạt
+- intent: Hoi_th_trung_nguyen
+  examples: |
+    - thương hiệu trung nguyên có những sản phẩm nào
+    - cà phê trung nguyên thì sao
+    - trung nguyên
+
+- intent: Hoi_th_leelong
+  examples: |
+    - thương hiệu leelong có những sản phẩm nào
+    - cà phê leelong thì sao
+    - leelong
+
+- intent: Hoi_th_vinacafe
+  examples: |
+    - thương hiệu vinacafe có những sản phẩm nào
+    - cà phê vinacafe thì sao
+    - vinacafe
+    - vina
+    - cà phê vina
+
+- intent: Hoi_th_highlands
+  examples: |
+    - thương hiệu highlands có những sản phẩm nào
+    - cà phê highlands thì sao
+    - highlands
+    - highland
+    - hightland
+
+
+- intent: Hoi_th_90s
+  examples: |
+    - thương hiệu 90S coffee việt nam có những sản phẩm nào
+    - cà phê 90S coffee việt nam thì sao
+    - 90S coffee việt nam
+    - 90S coffee
+    - 90S
+
+- intent: Hoi_th_lelit
+  examples: |
+    - thương hiệu lelit có những sản phẩm nào
+    - thương hiệu lelit thì sao
+    - lelit
 
 - intent: Hoi_khong_noi_dung
   examples: |
@@ -44,6 +78,9 @@ nlu:
     - sfgdzfdhf
     - ySFNHcb
     - yuhbdnsmkxjkncbeifgdsjbzxc xmbvusgeflfmv xlvbdjvbelffn
+    - e1e4e5x2ce1
+    - ....,,...
+    - }.{,]/[;.,,.=-/.;?'><()\|-*/+
 
 - intent: Hoi_thuong_hieu
   examples: |
@@ -91,6 +128,7 @@ nlu:
     - có những loại sản phẩm nào
     - có những loại cà phê nào
     - shop bán loại cà phê nào
+    - tôi muốn biết về sản phẩm của cửa hàng
 
 - intent: Hoi_cf_ban_chay
   examples: |
