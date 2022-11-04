@@ -73,7 +73,7 @@ stories:
 
 - story: Hỏi cửa hàng bán gì
   steps:
-  - intent: Hoi_cua_hang_ban_gi
+  - intent: Hoi_cua_hang_kinh_doanh_gi
   - action: utter_cua_hang_ban_gi
 
 - story: Hỏi về sản phẩm khác

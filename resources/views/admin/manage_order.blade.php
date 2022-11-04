@@ -81,7 +81,8 @@
                         <td>
                             <a href="{{URL::to('/view-order/'.$ord->order_id)}}" class="active styling-edit"
                                 ui-toggle-class=""><i class="fa fa-eye text-success text-active"></i></a>
-
+                                <a onclick="return confirm('Bạn có chắc là muốn xóa đơn hàng này?')" href="{{URL::to('/delete-order/'.$ord->order_id)}}"
+                                 class="active styling-edit"  ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
                         </td>
                     </tr>
                     @endforeach

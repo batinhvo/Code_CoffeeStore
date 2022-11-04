@@ -118,6 +118,7 @@ Route::get('/statistical','App\Http\Controllers\OrderController@statistical');
 Route::get('/view-order/{order_id}','App\Http\Controllers\OrderController@view_order');
 Route::get('/filter-order/{order_status}','App\Http\Controllers\OrderController@filter_order');
 Route::post('/update-order-quantity','App\Http\Controllers\OrderController@update_order_quantity');
+Route::get('/delete-order/{order_id}','App\Http\Controllers\OrderController@delete_order');
 
 
 

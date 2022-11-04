@@ -77,7 +77,7 @@
            <td><img src="public/uploads/product/{{$com->product->product_image}}" alt="" height="100" width="100"></td>
             <!-- <td><span class="text-ellipsis">26.08.2000</span></td> -->
             <td>
-              <a href="" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-pencil-square-o text-success text-active"></i></a>
+              
               <a onclick="return confirm('Bạn có chắc là muốn xóa bình luận này?')" href="{{URL::to('/delete-comment/'.$com->comment_id)}}" class="active styling-edit"  ui-toggle-class=""><i class="fa fa-times text-danger text"></i></a>
             </td>
           </tr>

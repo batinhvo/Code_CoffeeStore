@@ -44,6 +44,14 @@ class OrderController extends Controller
         return view('admin.statistical')->with(compact('order_all'))->with(compact('order'))->with(compact('or_detail'));
     }
 
+    public function delete_order($order_id){
+        $this->AuthLogin();
+        DB::table('tbl_order')->where('order_id',$order_id)->delete();
+        DB::table('tbl_order_detail')->where('order_id',$order_id)->delete();
+        Session::put('message','Xóa đơn hàng thành công');
+        return Redirect::to('manage-order');
+    }
+
     public function filter_order($order_status){
         $order=Order::where('order_status',$order_status)->orderby('created_at','DESC')->get();
         return view('admin.filter_order')->with(compact('order'));

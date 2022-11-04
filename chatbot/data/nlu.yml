@@ -15,6 +15,12 @@ nlu:
     - chào
     - chào bạn
     - cho hỏi
+    - shop ơi cho hỏi
+    - bạn ơi
+    - alo
+    - có ai ở đây không
+    - bạn gì ơi
+    - alooo
 
 - intent: goodbye
   examples: |
@@ -32,12 +38,17 @@ nlu:
     - thương hiệu trung nguyên có những sản phẩm nào
     - cà phê trung nguyên thì sao
     - trung nguyên
+    - thuong hieu
+    - trung nguyen
 
 - intent: Hoi_th_leelong
   examples: |
     - thương hiệu leelong có những sản phẩm nào
     - cà phê leelong thì sao
     - leelong
+    - thuong hieu leelong
+    - leelong ca phe
+    - leelong Coffee
 
 - intent: Hoi_th_vinacafe
   examples: |
@@ -69,6 +80,8 @@ nlu:
     - thương hiệu lelit có những sản phẩm nào
     - thương hiệu lelit thì sao
     - lelit
+    - sản pham lelit
+    - sản phẩm lelit
 
 - intent: Hoi_khong_noi_dung
   examples: |
@@ -88,11 +101,32 @@ nlu:
     - thương hiệu sản phẩm
     - thương hiệu
     - cơ sở sản xuất
+    - co so san xuat
+    - thuong hieu
+    - thương hiệu nào đang bán tại cửa hàng
+    - thương hiệu nào đang được kinh doanh vậy
+    - bạn kinh doanh thương hiệu nào vậy
+    - bán sản phẩm của thương hiệu nào vậy
+    - kinh doanh nhãn hàng nào vậy
+    - nhãn hàng
+    - dòng sản phẩm của thương hiệu nào
+    - nhan hang nao dang kinh doanh
 
 - intent: Hoi_sdt
   examples: |
     - số điện thoại
     - số điện thoại cửa hàng
+    - so dien thoai
+    - số điện thoại cửa hàng là gì?
+    - số điện thoại của cửa hàng
+    - số điện thoại của shop là gì
+    - tôi muốn xin số điện thoại của shop
+    - tôi muốn biết số điện thoại của shop
+    - tôi muốn hỏi sdt của shop
+    - sdt
+    - sđt
+    - SĐT
+    - ĐT
 
 - intent: Hoi_dia_chi_cua_hang
   examples: |
@@ -102,6 +136,12 @@ nlu:
     - vị trí shop
     - địa chỉ 
     - vị trí
+    - dia chi
+    - vi tri
+    - địa điểm
+    - shop nằm ở đâu vậy
+    - tôi muốn biết vị trí
+    - tôi muốn hỏi vị trí cửa hàng
 
 - intent: Hoi_nguon_goc
   examples: |
@@ -110,6 +150,10 @@ nlu:
     - nhập hàng ở đâu
     - nguồn gốc
     - nhập hàng
+    - nguon goc
+    - nhap hang
+    - lấy hàng
+    - lay hang
 
 - intent: Hoi_dung_cu_pha_che
   examples: |
@@ -120,15 +164,25 @@ nlu:
     - máy pha cà phê
     - máy xay cà phê
 
-- intent: Hoi_cua_hang_ban_gi
+- intent: Hoi_cua_hang_kinh_doanh_gi
   examples: |
     - cửa hàng có những loại sản phẩm nào?
     - cửa hàng có những loại cà phê nào?
+    - cửa hàng đang kinh doanh sản phẩm gì?
     - có những loại hàng nào
     - có những loại sản phẩm nào
     - có những loại cà phê nào
     - shop bán loại cà phê nào
     - tôi muốn biết về sản phẩm của cửa hàng
+    - loại hàng đang kinh doanh
+    - co nhung loai hang nao
+    - co san pham nao
+    - kinh doanh nhung gi
+    - cua hang co loai ca phe nao?
+    - shop co ban loai ca phê nào?
+    - shop bán gì?
+
+
 
 - intent: Hoi_cf_ban_chay
   examples: |
@@ -148,7 +202,20 @@ nlu:
     - cà phê rang xay có những loại nào ?
     - thông tin cà phê rang xay?
     - rang xay
-    - ca phê rang xay
+    - cà phê rang xay
+    - ca phe rang xay
+    - tôi muốn xem một số sản phẩm rang xay
+    - shop bán cà phê rang nào ngon không
+    - shop bán cà phê xay nào ngon không
+    - shop có cà phê xay không
+    - cửa hàng có cà phê rang không
+    - bạn có cà phê rang xay không
+    - bạn có bán cà phê rang xay nào ngon không
+    - có loại rang xay nào ngon không vậy
+    - có loại rang xay nào không vậy
+    - tôi muốn hỏi sản phẩm rang xay nào ngon không
+
+
 
 - intent: Hoi_san_pham_cf_ht
   examples: |
@@ -158,6 +225,14 @@ nlu:
     - thông tin cà phê hòa tan?
     - hòa tan
     - ca phê hòa tan
+    - ca phe hoa tan
+    - shop kinh doanh cà phê hòa tan nào vậy
+    - có cà phê hòa tan nào thơm thơm không
+    - shop kinh doanh coffee hòa tan nào
+    - cửa hàng bán cf hòa tan nào vậy
+    - kinh doanh cf hòa tan nào
+    - coffee hòa tan
+    - cf hòa tan 
 
 - intent: Hoi_san_pham_cf_hat
   examples: |
@@ -167,6 +242,17 @@ nlu:
     - thông tin cà phê hạt?
     - hạt
     - ca phê hạt
+    - coffee hạt
+    - cf hạt
+    - cafe hạt
+    - kinh doanh cà phê hạt nào
+    - shop bán loại cà phê hạt nào vậy
+    - cửa hàng kinh doanh lọi cà phê hạt nào 
+    - có bán cà phê hạt nào ngon không
+    - cửa hàng có bán cà phê hạt nào ngon không
+    - shop ban cf hạt nào ngon không vậy
+    - bạn có loại cà phê hạt nào ngon không
+    - bạn có bán cf hạt loại nào ngon ngon không 
 
 - intent: Hoi_ve_phi_ship
   examples: |
@@ -182,6 +268,17 @@ nlu:
     - tiền ship đến địa chỉ
     - phí ship đến địa chỉ
     - tiền giao hàng đến địa chỉ
+    - tien giao hang
+    - phi giao hang
+    - tien ship nhu the nao
+    - phi ship gần là bao nhiêu
+    - ở xa phí ship là bao nhiêu
+    - tiền giao hàng ở xa là bao nhiêu
+    - ở gần tiền giao hàng là bao nhiêu
+    - phí giao hàng ở gần
+    - phí ship ở gần
+    - phí ship ở xa
+
 
 - intent: Hoi_ve_san_pham_khac
   examples: |
@@ -191,6 +288,21 @@ nlu:
     - còn loại nào nữa không?
     - có loại nào khác không?
     - sản phẩm khác?
+    - san pham khac
+    - con loai nao nua khong
+    - còn loại nào khác không
+    - có loại nào khác không
+    - bạn còn loại nào nữa không
+    - bạn còn sản phẩm nào hk
+    - còn sản phẩm nào nữa hông
+    - shop còn loại nào nữa hông
+    - tôi muốn xem thêm nữa
+    - tôi muốn thêm vài sản phẩm nữa
+    - shop có thể cho xem thêm sản phẩm nào nữa không
+    - xem thêm sản phẩm khác
+    - xem them san pham khac
+    - thêm sản phẩm khác
+    - thêm loại sản phẩm khác
 
 - intent: affirm
   examples: |
