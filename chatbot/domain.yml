@@ -27,24 +27,30 @@ intents:
   - Hoi_th_highlands
   - Hoi_th_90s
   - Hoi_th_lelit
+  - Hoi_sp_co_khong
+  - Hoi_gia_sp
 
-# entities: 
-# - product_name                                          
+entities: 
+- product_name                                          
 
-# slots:
-#   slot_name:
-#     type: text
-#     mappings:
-#     - type: from_entity
-#       entity: product_name 
 
-# actions:
-#   - Hi
+slots:
+  product_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: product_name 
+
+actions:
+  - Tl_sp_co_khong
+  - Tl_gia_sp
 
 
 responses:
   utter_khong_noi_dung:
-  - text: "Xin lỗi! tôi chưa hiểu ý của bạn!"
+  - text: "Xin lỗi! Tôi chưa hiểu ý của bạn!"
+  - text: "Xin lỗi! Tôi chưa hiểu ý bạn lắm!"
+  - text: "Xin lỗi! Bạn có thể nói rõ nội dung hơn được không?"
 
   utter_thong_tin_cf_hat:
   - text: "Cà phê hạt là cà phê thô, vẫn còn nguyên hạt chưa qua quá trình xay, giữ nguyên hương vị cà phê vốn có."
@@ -71,7 +77,7 @@ responses:
   - text: "CoffeeStore đang kinh doanh những sản phẩm của các thương hiệu như: [Cà phê Trung Nguyên](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/10), [90S coffee Việt Nam](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/14), [LeeLong coffee](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/13), [Vina Cafe](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12), [Coffee Highlands](http://localhost/Code_CoffeeStore/thuong-hieu-san-pham/12)."
 
   utter_sdt:
-  - text: "Số điện thoại cửa hàng là 0911265883"
+  - text: "Số điện thoại của cửa hàng là 0911265883"
 
   utter_dia_chi_cua_hang:
   - text: "Địa chỉ cửa hàng nằm ở số 13 Đường Trần Bạch Đằng, P.An Khánh, Q.Ninh Kiều, TP.Cần Thơ"
@@ -90,6 +96,7 @@ responses:
 
   utter_cf_ban_chay:
   - text: "Một số gợi ý sản phẩm cà phê được mua nhiều nhất: [Cà phê Robusta Đắk Lắk 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/36), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
+  - text: "Một số gợi ý sản phẩm cà phê được mua nhiều nhất: [Truyền thống 1kg](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/32), [Cà phê Trung Nguyên S chinh phục thành công 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/24), [Cà phê G7 Hoà tan đen Trung Nguyên](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/27),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
 
   utter_phi_ship:
   - text: "Phí giao hàng trong khoảng từ 30000đ-50000đ. Bạn có thể biết rõ về khoảng tiền giao hàng khi tiến hành đặt hàng."
@@ -112,19 +119,27 @@ responses:
   utter_cheer_up:
   # - text: "Here is something to cheer you up:"
   #   image: "https://i.imgur.com/nGF1K8f.jpg"
-   - text: "Xin lỗi! tôi chưa hiểu ý của bạn!"
+  - text: "Xin lỗi! tôi chưa hiểu ý của bạn!"
 
   utter_giup_do:
   - text: "Tôi có thể giúp gì cho bạn không?"
+  - text: "Bạn cần tôi giúp gì không?"
+  - text: "Bạn cần tìm hiểu gì về cửa hàng?"
 
   utter_did_that_help:
   - text: "Tôi có thể giúp gì cho bạn?"
+  - text: "Bạn cần tôi giúp gì không?"
+  - text: "Bạn cần tìm hiểu gì về cửa hàng?"
 
   utter_happy:
   - text: "Great, carry on!"
 
   utter_goodbye:
   - text: "CoffeeStore trân trọng cảm ơn bạn đã quan tâm. Hẹn gặp lại!"
+  - text: "Tạm biệt bạn. Hẹn gặp lại lần sau!"
+  - text: "Tạm biệt!"
+  - text: "Hẹn gặp lại lần sau!"
+  - text: "Khi nào rãnh lại nói chuyện với nhau nhé!" 
 
   utter_iamabot:
   - text: "Vâng. Tôi là robot."

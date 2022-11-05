@@ -9,6 +9,16 @@ stories:
   - intent: mood_great
   - action: utter_happy
 
+- story: Hỏi về giá sản phẩm
+  steps:
+  - intent: Hoi_gia_sp
+  - action: Tl_gia_sp
+
+- story: Hỏi sản phẩm có không
+  steps:
+  - intent: Hoi_sp_co_khong
+  - action: Tl_sp_co_khong
+
 - story: Hỏi thương hiệu trung nguyên
   steps:
   - intent: Hoi_th_trung_nguyen

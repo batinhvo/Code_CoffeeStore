@@ -349,7 +349,36 @@ nlu:
     - tôi đang nói chuyện với một con robot?
     - tôi đang nói chuyện với một con người?
     
-# - intent: ten_san_pham
-#   examples: |
-#     - sản phẩm [cà phê chất](product_name) có không?
-#     - [cà phê chất](product_name) có bán ở đây không?
+- intent: Hoi_sp_co_khong
+  examples: |
+    - sản phẩm [cafe chất](product_name) có không?
+    - [cafe chất](product_name) có bán ở đây không?
+    - [sành điệu 200g](product_name) có bán ở đây không?
+    - [truyền thống 1kg](product_name) có bán ở đây không?
+    - [cà phê rang và xay classic](product_name) có bán ở đây không?
+    - [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán ở đây không?
+    - có [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán không?
+    - có [Cà phê G7 Hoà tan đen Trung Nguyên](product_name) có bán không?
+    - có [cà phê số 5](product_name) có bán không?
+    - có [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
+    - có [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
+    - có [cà phê 3 in 1 GOLD](product_name) có bán không?
+    - có [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
+    - có [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
+
+- intent: Hoi_gia_sp
+  examples: |
+    - sản phẩm [cafe chất](product_name) giá bao nhiêu vậy?
+    - [cafe chất](product_name) giá bao nhiêu vậy?
+    - [sành điệu 200g](product_name) giá bao nhiêu vậy?
+    - [truyền thống 1kg](product_name) giá bao nhiêu vậy?
+    - [cà phê rang và xay classic](product_name) giá bao nhiêu vậy?
+    - [cà phê siêu sạch sáng tạo 8 500g](product_name) giá bao nhiêu vậy?
+    - giá [cà phê siêu sạch sáng tạo 8 500g](product_name) giá bao nhiêu vậy?
+    - giá [Cà phê G7 Hoà tan đen Trung Nguyên](product_name) giá bao nhiêu vậy?
+    - giá [cà phê số 5](product_name) giá bao nhiêu vậy?
+    - giá [Cà phê Robusta Đắk Lắk 1kg](product_name) giá bao nhiêu vậy?
+    - giá [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) giá bao nhiêu vậy?
+    - giá [cà phê 3 in 1 GOLD](product_name) giá bao nhiêu vậy?
+    - giá [Cà phê hạt Espresso Trung Nguyên 500g](product_name) giá bao nhiêu vậy?
+    - giá [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) giá bao nhiêu vậy?
