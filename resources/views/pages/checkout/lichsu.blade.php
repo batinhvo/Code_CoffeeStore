@@ -47,6 +47,9 @@
                                         ui-toggle-class=""><i class="fa fa-eye text-success text-active"></i></a>
 
                                 </td>
+                                <!-- <td class="cart_delete">
+								    <a onclick="return confirm('Bạn có chắc là muốn HỦY đơn hàng này?')" class="cart_quantity_delete" href=""><i>Hủy đơn</i></a>
+							    </td> -->
                             </tr>
                             @endforeach
                         </tbody>

@@ -52,7 +52,7 @@
                     <div class="col-sm-6">
                         <div class="social-icons pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="https://www.facebook.com/vi.diep.54584"><i class="fa fa-facebook"></i></a>
+                                <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
                                 </li>
                                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                                 <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
@@ -668,7 +668,7 @@
                             success: function(data) {
                                 swal({
                                 title: "Đơn hàng",
-                                text: "Đơn hàng của bạn đã được xác nhận",
+                                text: "Đơn hàng của bạn đã được xác nhận. Thời gian giao hàng dự kiến từ 3-5 ngày tới!",
                                 // showCancelButton: true,
                                 // cancelButtonText: "Xem tiếp",
                                 confirmButtonClass: "btn-success",

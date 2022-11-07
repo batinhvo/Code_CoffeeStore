@@ -1,5 +1,12 @@
 @extends('normal_layout')
 @section('content')
+<?php
+		$message=Session::get('message');
+		if($message){
+			echo '<span class="text-alert">'.$message.'</span>';
+			Session::put('message',null);
+		}
+	?>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb" style="background:none;">
     <li class="breadcrumb-item"><a href="{{url('/')}}">Trang chủ</a></li>
@@ -7,6 +14,7 @@
     <li class="breadcrumb-item active" aria-current="page">{{$product_name}}</li>
   </ol>
 </nav>
+
 @foreach($detail_product as $key => $detail)
 	<div class="product-details">	
 		<div class="col-sm-5">

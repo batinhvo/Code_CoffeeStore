@@ -330,6 +330,17 @@ nlu:
     - tôi cảm thấy rất tốt
     - rất tốt
 
+- intent: thank
+  examples: |
+    - tốt
+    - hoàn hảo
+    - tôi rất thích nó
+    - tuyệt vời
+    - tôi cảm thấy rất tốt
+    - rất tốt
+    - cảm ơn
+    - cảm ơn bạn
+
 - intent: mood_unhappy
   examples: |
     - ngày của tôi thật kinh khủng

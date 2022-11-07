@@ -142,6 +142,18 @@ stories:
   - intent: Hoi_ve_san_pham_khac
   - action: utter_ht_khac
 
+- story: kich ban htan
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Hoi_san_pham_cf_ht
+  - action: utter_ht
+  - intent: thank
+  - action: utter_happy
+  - intent: goodbye
+  - action: utter_goodbye
+
+
 
 
 - story: sad path 1

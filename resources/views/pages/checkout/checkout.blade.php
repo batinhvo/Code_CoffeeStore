@@ -163,7 +163,7 @@
 					<div class="total_area">
 						<ul>
 							<li>Tổng  <span>{{Cart::subtotal(0,'','.').' VNĐ'}}</span></li>
-							<li>Thuế <span>{{Cart::tax(0,'','.').' VNĐ'}}</span></li>
+							<!-- <li>Thuế <span>{{Cart::tax(0,'','.').' VNĐ'}}</span></li> -->
 							@if(Session::get('fee'))
 							<li><a  class="cart_quantity_delete" href="{{URL::to('/delete-fee')}}"><i class="fa fa-times"></i></a>Phí vận chuyển <span>{{number_format(Session::get('fee'), 0, '.', '.'). ' VNĐ'}}</span></li>
 							<?php $total_fee=Session::get('fee'); ?>

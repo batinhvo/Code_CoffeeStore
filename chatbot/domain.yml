@@ -29,6 +29,7 @@ intents:
   - Hoi_th_lelit
   - Hoi_sp_co_khong
   - Hoi_gia_sp
+  - thank
 
 entities: 
 - product_name                                          
@@ -132,7 +133,7 @@ responses:
   - text: "Bạn cần tìm hiểu gì về cửa hàng?"
 
   utter_happy:
-  - text: "Great, carry on!"
+  - text: "Cảm ơn bạn đã ghé thăm cửa hàng!"
 
   utter_goodbye:
   - text: "CoffeeStore trân trọng cảm ơn bạn đã quan tâm. Hẹn gặp lại!"
