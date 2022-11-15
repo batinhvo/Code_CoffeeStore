@@ -2,10 +2,16 @@
 @section('content')
 <div class="features_items"><!--features_items-->
                     <h2 class="title text-center">Kết quả tìm kiếm: <span style="color:#0042FD;"><?php echo $keyword;?></span></h2>
+                    <?php if($search == 2){ ?>
+                               <span style="color:red; font-size: 20px;">Sản phẩm không được tìm thấy tại cửa hàng!</span>
+                            <?php } ?>
                     @foreach($search_product as $key =>$product)
                     <div class="col-sm-4">
                         <div class="product-image-wrapper">
-                        
+                            
+                            
+                                
+                            
                             <div class="single-products">
                                     <div class="productinfo text-center">
                                         <form>

@@ -51,7 +51,7 @@ responses:
   utter_khong_noi_dung:
   - text: "Xin lỗi! Tôi chưa hiểu ý của bạn!"
   - text: "Xin lỗi! Tôi chưa hiểu ý bạn lắm!"
-  - text: "Xin lỗi! Bạn có thể nói rõ nội dung hơn được không?"
+  - text: "Xin lỗi! Tôi chưa hiểu bạn đang cần gì!"
 
   utter_thong_tin_cf_hat:
   - text: "Cà phê hạt là cà phê thô, vẫn còn nguyên hạt chưa qua quá trình xay, giữ nguyên hương vị cà phê vốn có."
@@ -103,7 +103,7 @@ responses:
   - text: "Phí giao hàng trong khoảng từ 30000đ-50000đ. Bạn có thể biết rõ về khoảng tiền giao hàng khi tiến hành đặt hàng."
 
   utter_greet:
-  - text: "Xin chào! CoffeeStore có thể giúp gì cho bạn?"
+  - text: "CoffeStore xin chào! \nHãy nhập từ khóa bạn muốn tìm để mình có thể giải đáp thắc mắc giúp bạn nhé!"
 
   utter_rx:
   - text: "Một số gợi ý sản phẩm cà phê rang xay: [Cà phê số 5 Dịu](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/39), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
@@ -128,9 +128,9 @@ responses:
   - text: "Bạn cần tìm hiểu gì về cửa hàng?"
 
   utter_did_that_help:
-  - text: "Tôi có thể giúp gì cho bạn?"
-  - text: "Bạn cần tôi giúp gì không?"
-  - text: "Bạn cần tìm hiểu gì về cửa hàng?"
+  - text: "Bạn có thể nói rõ hơn được không?"
+  - text: "Bạn có thể viết rõ hơn được không?"
+  - text: "Bạn hãy nhập rõ hơn để mình tư vấn nhé!"
 
   utter_happy:
   - text: "Cảm ơn bạn đã ghé thăm cửa hàng!"

@@ -131,7 +131,8 @@ class HomeController extends Controller
         $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
         $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
         $search_product=DB::table('tbl_product')->where('product_name','like','%'.$keywords.'%')->where('product_status','1')->orderby('product_id','desc')->limit(6)->get();
-        return view('pages.product.search')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('search_product',$search_product)->with('post',$post)->with('keyword',$keywords);
+        $search_pro = strlen($search_product);
+        return view('pages.product.search')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('search_product',$search_product)->with('post',$post)->with('keyword',$keywords)->with('search',$search_pro);
     }
 
     public function send_mail(){

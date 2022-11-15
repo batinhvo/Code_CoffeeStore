@@ -5,9 +5,16 @@
 			<div class="breadcrumbs">
 				<ol class="breadcrumb">
 				  <li><a href="{{URL::to('/trang-chu')}}">Trang chủ</a></li>
-				  <li class="active">Thanh toán giỏ hàng</li>
+				  <li class="active">Đăng nhập/ Đăng ký</li>
 				</ol>
 			</div><!--/breadcrums-->
+			<?php
+		$message=Session::get('message');
+		if($message){
+			echo '<span class="text-alert">'.$message.'</span>';
+			Session::put('message',null);
+		}
+	?>
 			<div class="row">
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->

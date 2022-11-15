@@ -53,7 +53,7 @@ stories:
   steps:
   - intent: Hoi_khong_noi_dung
   - action: utter_khong_noi_dung
-  - action: utter_giup_do
+  - action: utter_did_that_help
 
 
 - story: Hỏi thương hiệu

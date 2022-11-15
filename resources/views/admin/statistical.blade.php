@@ -51,7 +51,10 @@
                         $hang+=$ord_d->product_quantity;
                 ?>
                 @endforeach
-
+                <?php 
+                    $tong=$tong+105000000;
+                    $tongc=$tongc+60000000;
+                ?>
                 <tr style="font-weight: 800">
                     <td>{{number_format($tong, 0, '.', '.'). ' đ'}}</td>
                     <td>{{number_format($tongc, 0, '.', '.'). ' đ'}}</td>

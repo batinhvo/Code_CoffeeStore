@@ -43,7 +43,7 @@
                 if($ad->roles==1){
                 ?>   
                   <a onclick="return confirm('Bạn có chắc là muốn thay đổi tài khoản này từ Quản lý->Nhân viên ?')" href="{{URL::to('/unactive-admin/'.$ad->admin_id)}}">
-                  <input type="button" class="btn btn-xs btn-primary comment_duyet_btn" value="Quản lý">
+                  <input type="button" class="btn btn-xs btn-success comment_duyet_btn" value="Quản lý">
                   </a>
                <?php }else {
                ?>  

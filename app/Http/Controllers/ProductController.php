@@ -113,8 +113,6 @@ class ProductController extends Controller
         $this->AuthLogin();
         $category_product=DB::table('tbl_category_product')->orderby('category_id','desc')->get();
         $brand_product=DB::table('tbl_brand')->orderby('brand_id','desc')->get();
-
-        
         return view('admin.product.add_product')->with('category_product',$category_product)->with('brand_product',$brand_product);
     }
     public function all_product(){
@@ -143,23 +141,32 @@ class ProductController extends Controller
         if($get_image){
             $get_name_image=$get_image->getClientOriginalName();
             $name_image=current(explode('.',$get_name_image));
-            $new_image=$name_image.rand(0,999).'.'.$get_image->getClientOriginalExtension();
-            $get_image->move('public/uploads/product/',$new_image);
-            File::copy($path.$new_image,$path_gallery.$new_image);
-            $data['product_image']=$new_image;
+            $new_image=$name_image.'.'.$get_image->getClientOriginalExtension();
+            // $new_image=$name_image.rand(0,999).'.'.$get_image->getClientOriginalExtension();
+            // $get_image->move('public/uploads/product/',$new_image);
+            // File::copy($path.$new_image,$path_gallery.$new_image);
+             $data['product_image']=$new_image;
          
         }
-        $pro_id=DB::table('tbl_product')->insertGetId($data);
-        $gallery=new Gallery();
-        $gallery->gallery_image=$new_image;
-        $gallery->gallery_name=$new_image;
-        $gallery->product_id=$pro_id;
-        $gallery->save();
+        $pro_name = 'ten';
+        $search_product=DB::table('tbl_product')->where('product_name','like','%'.$request->product_name.'%')->get();
+        foreach($search_product as $product_tk){
+            $pro_name = $product_tk->product_name;
+        }
+        if($request->product_name == $pro_name){
+            Session::put('message','Tên sản phẩm đã tồn tại!');
+            return redirect()->back();
+        }else{
+            $pro_id=DB::table('tbl_product')->insertGetId($data);
+            $gallery=new Gallery();
+            $gallery->gallery_image=$new_image;
+            $gallery->gallery_name=$new_image;
+            $gallery->product_id=$pro_id;
+            $gallery->save();
+            Session::put('message','Thêm sản phẩm thành công');
+            return Redirect::to('all-product');
+        }
 
-        
-        Session::put('message','Thêm sản phẩm thành công');
-        return Redirect::to('all-product');
-       
     }
 
     public function active_product($product_id){
@@ -198,14 +205,14 @@ class ProductController extends Controller
        $data['product_sold']=$request->product_sold;
        $path='public/uploads/product/';
        $path_gallery='public/uploads/gallery/';
-       
        $get_image=$request->file('product_image');
        if($get_image){
            $get_name_image=$get_image->getClientOriginalName();
            $name_image=current(explode('.',$get_name_image));
-           $new_image=$name_image.rand(0,999).'.'.$get_image->getClientOriginalExtension();
-           $get_image->move('public/uploads/product',$new_image);
-           File::copy($path.$new_image,$path_gallery.$new_image);
+        //    $new_image=$name_image.rand(0,999).'.'.$get_image->getClientOriginalExtension();
+           $new_image=$name_image.'.'.$get_image->getClientOriginalExtension();
+        //    $get_image->move('public/uploads/product',$new_image);
+        //    File::copy($path.$new_image,$path_gallery.$new_image);
            $data['product_image']=$new_image;
            $gallery=Gallery::where('product_id',$product_id);
            $gallery->delete();
@@ -230,7 +237,7 @@ class ProductController extends Controller
         $this->AuthLogin();
         $product=Product::find($product_id);
      
-        unlink('public/uploads/product/'.$product->product_image);
+        // unlink('public/uploads/product/'.$product->product_image);
         $product->delete();
         Session::put('message','Xóa sản phẩm thành công');
         return Redirect::to('all-product');

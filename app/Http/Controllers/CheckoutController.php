@@ -202,12 +202,27 @@ class CheckoutController extends Controller
         $data['customer_email']=$request->customer_email;
         $data['customer_password']=md5($request->customer_password);
         $data['customer_phone']=$request->customer_phone;
-        $customer_id= DB::table('tbl_customer')->insertGetId($data);
+        $phone = strlen($request->customer_phone);
+        $pass = strlen($request->customer_password);
+        $pa = ctype_digit($request->customer_phone);
+        if($phone < 10 || $phone > 11 || $pa != 1){
+            Session::put('message','Số điện thoại không đúng!');
+            return redirect()->back();
+        }else if($pass < 8){
+            Session::put('message','Mật khẩu quá ngắn! Vui lòng nhập mật khẩu dài hơn 8 ký tự.');
+            return redirect()->back();
+        }else if($pass > 20){
+            Session::put('message','Mật khẩu quá dài!');
+            return redirect()->back();
+        }else{
+            $customer_id= DB::table('tbl_customer')->insertGetId($data);
+            Session::put('customer_id',$customer_id);
+            Session::put('customer_name',$request->customer_name);
+            return Redirect('/trang-chu');
+        }
         
-        Session::put('customer_id',$customer_id);
-        Session::put('customer_name',$request->customer_name);
-        return Redirect('/checkout');
     }
+
     public function checkout(){
         $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
         $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
@@ -241,9 +256,14 @@ class CheckoutController extends Controller
         if($result){
             Session::put('customer_id',$result->customer_id);
             Session::put('customer_name',$result->customer_name);
-        return Redirect('/trang-chu');
+            return Redirect('/trang-chu');
+        }if($result == []){
+            Session::put('message','Vui lòng điền đầy đủ Tên đăng nhập và mật khẩu!');
+            return Redirect('/login-checkout');
+        }else{
+            Session::put('message','Mật khẩu hoặc tên đăng nhập không đúng!');
+            return Redirect('/login-checkout');
         }
-        else return Redirect('/login-checkout');
         
     }
 

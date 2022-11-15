@@ -29,11 +29,11 @@ class Tl_sp_co_khong(Action):
         # Lấy nội dung entity từ câu truy vấn
         myconn = mysql.connector.connect(host = "localhost", user = "root", passwd = "", database="coffeestore")
         cf_db = myconn.cursor()
-        codeOfcoffee = "SELECT product_name FROM tbl_product WHERE product_name LIKE '{}'".format(pro_name)
+        codeOfcoffee = "SELECT product_name FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
         product_id = "SELECT product_id FROM tbl_product WHERE product_name LIKE '{}'".format(pro_name)
         cf_db.execute(codeOfcoffee)
         result = cf_db.fetchall()
-
+        print(codeOfcoffee)
         cf_db.execute(product_id)
         result55 = str(cf_db.fetchall())
         result66 = result55.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
@@ -57,12 +57,12 @@ class Tl_sp_co_khong(Action):
         # Lấy nội dung entity từ câu truy vấn
         myconn = mysql.connector.connect(host = "localhost", user = "root", passwd = "", database="coffeestore")
         cf_db = myconn.cursor()
-        codeOfcoffee = "SELECT product_price FROM tbl_product WHERE product_name LIKE '{}'".format(pro_name)
+        codeOfcoffee = "SELECT product_price FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
         cf_db.execute(codeOfcoffee)
         result = str(cf_db.fetchall())
         results = result.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
         result1 = results.replace("'", ' ')
-        print(result)
+        print(codeOfcoffee)
         if (result == []):
             dispatcher.utter_message("Hiện tại cửa hàng không có sản phẩm này!") 
         else:

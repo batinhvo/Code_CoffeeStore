@@ -1,7 +1,7 @@
 version: "3.1"
 
 nlu:
-- intent: greet
+- intent: greet #18
   examples: |
     - hey
     - hello
@@ -22,7 +22,7 @@ nlu:
     - bạn gì ơi
     - alooo
 
-- intent: goodbye
+- intent: goodbye #8
   examples: |
     - good by
     - good night
@@ -33,7 +33,7 @@ nlu:
     - tạm biệt
     - cảm ơn
 
-- intent: Hoi_th_trung_nguyen
+- intent: Hoi_th_trung_nguyen #5
   examples: |
     - thương hiệu trung nguyên có những sản phẩm nào
     - cà phê trung nguyên thì sao
@@ -41,7 +41,7 @@ nlu:
     - thuong hieu
     - trung nguyen
 
-- intent: Hoi_th_leelong
+- intent: Hoi_th_leelong #6
   examples: |
     - thương hiệu leelong có những sản phẩm nào
     - cà phê leelong thì sao
@@ -50,7 +50,7 @@ nlu:
     - leelong ca phe
     - leelong Coffee
 
-- intent: Hoi_th_vinacafe
+- intent: Hoi_th_vinacafe #5
   examples: |
     - thương hiệu vinacafe có những sản phẩm nào
     - cà phê vinacafe thì sao
@@ -58,7 +58,7 @@ nlu:
     - vina
     - cà phê vina
 
-- intent: Hoi_th_highlands
+- intent: Hoi_th_highlands #5
   examples: |
     - thương hiệu highlands có những sản phẩm nào
     - cà phê highlands thì sao
@@ -67,7 +67,7 @@ nlu:
     - hightland
 
 
-- intent: Hoi_th_90s
+- intent: Hoi_th_90s #5
   examples: |
     - thương hiệu 90S coffee việt nam có những sản phẩm nào
     - cà phê 90S coffee việt nam thì sao
@@ -75,7 +75,7 @@ nlu:
     - 90S coffee
     - 90S
 
-- intent: Hoi_th_lelit
+- intent: Hoi_th_lelit #5
   examples: |
     - thương hiệu lelit có những sản phẩm nào
     - thương hiệu lelit thì sao
@@ -83,8 +83,10 @@ nlu:
     - sản pham lelit
     - sản phẩm lelit
 
-- intent: Hoi_khong_noi_dung
+- intent: Hoi_khong_noi_dung #12
   examples: |
+    - trà
+    - trái
     - abc
     - xyz
     - 123456789
@@ -95,7 +97,7 @@ nlu:
     - ....,,...
     - }.{,]/[;.,,.=-/.;?'><()\|-*/+
 
-- intent: Hoi_thuong_hieu
+- intent: Hoi_thuong_hieu #15
   examples: |
     - cửa hàng kinh doanh sản phẩm cửa thương hiệu nào
     - thương hiệu sản phẩm
@@ -112,7 +114,7 @@ nlu:
     - dòng sản phẩm của thương hiệu nào
     - nhan hang nao dang kinh doanh
 
-- intent: Hoi_sdt
+- intent: Hoi_sdt #13
   examples: |
     - số điện thoại
     - số điện thoại cửa hàng
@@ -128,7 +130,7 @@ nlu:
     - SĐT
     - ĐT
 
-- intent: Hoi_dia_chi_cua_hang
+- intent: Hoi_dia_chi_cua_hang #22
   examples: |
     - cửa hàng mình ở đâu?
     - shop ở đâu?
@@ -142,8 +144,18 @@ nlu:
     - shop nằm ở đâu vậy
     - tôi muốn biết vị trí
     - tôi muốn hỏi vị trí cửa hàng
+    - vi tri
+    - dia chi cua cua hang
+    - vi tri cua cua hang
+    - dia chi cua cua hang
+    - dia diem cua cua hang
+    - vi tri shop o dau
+    - cua hang o dau
+    - shop o dau vay
+    - toi muon biet vi tri cua cua hang
+    - toi muon biet dia chi cua shop
 
-- intent: Hoi_nguon_goc
+- intent: Hoi_nguon_goc #9
   examples: |
     - sản phẩm có nguồn gốc từ đâu?
     - cà phê có nguồn gốc từ đâu
@@ -155,7 +167,7 @@ nlu:
     - lấy hàng
     - lay hang
 
-- intent: Hoi_dung_cu_pha_che
+- intent: Hoi_dung_cu_pha_che #6
   examples: |
     - dụng cụ pha chế nào?
     - có loại máy pha cà phê không
@@ -164,7 +176,7 @@ nlu:
     - máy pha cà phê
     - máy xay cà phê
 
-- intent: Hoi_cua_hang_kinh_doanh_gi
+- intent: Hoi_cua_hang_kinh_doanh_gi #19
   examples: |
     - cửa hàng có những loại sản phẩm nào?
     - cửa hàng có những loại cà phê nào?
@@ -181,10 +193,13 @@ nlu:
     - cua hang co loai ca phe nao?
     - shop co ban loai ca phê nào?
     - shop bán gì?
+    - danh mục sản phẩm
+    - danh muc san pham cua cua hang
+    - cac danh muc san pham cua cua hang
 
 
 
-- intent: Hoi_cf_ban_chay
+- intent: Hoi_cf_ban_chay #8
   examples: |
     - cửa hàng có cà phê nào ngon không?
     - sản phẩm bán chạy nhất là gì?
@@ -195,7 +210,7 @@ nlu:
     - cà phê nào ngon nhất
     - bán chạy nhất
 
-- intent: Hoi_san_pham_cf_rx
+- intent: Hoi_san_pham_cf_rx #18
   examples: |
     - cửa hàng có cà phê rang xay nào ngon không ?
     - tôi muốn hỏi cà phê rang xay ?
@@ -217,7 +232,7 @@ nlu:
 
 
 
-- intent: Hoi_san_pham_cf_ht
+- intent: Hoi_san_pham_cf_ht #14
   examples: |
     - cửa hàng có cà phê hòa tan nào ngon không ?
     - tôi muốn hỏi cà phê hòa tan ?
@@ -234,7 +249,7 @@ nlu:
     - coffee hòa tan
     - cf hòa tan 
 
-- intent: Hoi_san_pham_cf_hat
+- intent: Hoi_san_pham_cf_hat #17
   examples: |
     - cửa hàng có cà phê hạt nào ngon không ?
     - tôi muốn hỏi cà phê hạt ?
@@ -254,7 +269,7 @@ nlu:
     - bạn có loại cà phê hạt nào ngon không
     - bạn có bán cf hạt loại nào ngon ngon không 
 
-- intent: Hoi_ve_phi_ship
+- intent: Hoi_ve_phi_ship #22
   examples: |
     - phí ship như thế nào?
     - tôi muốn biết về phí ship?
@@ -280,7 +295,7 @@ nlu:
     - phí ship ở xa
 
 
-- intent: Hoi_ve_san_pham_khac
+- intent: Hoi_ve_san_pham_khac #21
   examples: |
     - còn sản phẩm nào khác không?
     - có sản phẩm nào nữa không?
@@ -330,7 +345,7 @@ nlu:
     - tôi cảm thấy rất tốt
     - rất tốt
 
-- intent: thank
+- intent: thank #8
   examples: |
     - tốt
     - hoàn hảo
@@ -360,7 +375,7 @@ nlu:
     - tôi đang nói chuyện với một con robot?
     - tôi đang nói chuyện với một con người?
     
-- intent: Hoi_sp_co_khong
+- intent: Hoi_sp_co_khong #27
   examples: |
     - sản phẩm [cafe chất](product_name) có không?
     - [cafe chất](product_name) có bán ở đây không?
@@ -370,6 +385,21 @@ nlu:
     - [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán ở đây không?
     - có [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán không?
     - có [Cà phê G7 Hoà tan đen Trung Nguyên](product_name) có bán không?
+    - có [cà phê số 5](product_name) có bán không?
+    - có [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
+    - có [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
+    - có [cà phê 3 in 1 GOLD](product_name) có bán không?
+    - có [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
+    - có [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
+    - tôi muốn hỏi về [cafe chat](product_name)
+    - tôi muốn hỏi về [sanh đieu 200g](product_name)
+    - [cafe chat](product_name) có bán ở đây không?
+    - [sanh đieu 200g](product_name) có bán ở đây không?
+    - [truyen thong 1kg](product_name) có bán ở đây không?
+    - [ca phe rang va xay classic](product_name) có bán ở đây không?
+    - [ca phe sieu sach sang tao 8 500g](product_name) có bán ở đây không?
+    - có [ca phe sieu sach sang tao 8 500g](product_name) có bán không?
+    - có [Ca phe G7 Hoa tan đen Trung Nguyên](product_name) có bán không?
     - có [cà phê số 5](product_name) có bán không?
     - có [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
     - có [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
