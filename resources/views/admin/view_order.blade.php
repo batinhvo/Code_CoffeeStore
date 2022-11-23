@@ -235,8 +235,8 @@
           <?php
             $total_coupon=0;
           ?>
-          <td>Tổng cộng</td>
-          <td>
+          <td><b>Tổng cộng</b></td>
+          <td><b>
               <?php
                 if($coupon_condition==1){
                     $total_coupon=($total_money*$coupon_number)/100;
@@ -245,7 +245,7 @@
                   $total_coupon=$coupon_number;
                 }
               ?>
-          {{number_format($total_money-$total_coupon+$or_detail->product_feeship, 0, '.', '.'). ' VNĐ'}}</td>
+          {{number_format($total_money-$total_coupon+$or_detail->product_feeship, 0, '.', '.'). ' VNĐ'}}</b></td>
         </tr>
 
         <tr>

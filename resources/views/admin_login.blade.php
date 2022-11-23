@@ -26,7 +26,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <!-- //font-awesome icons -->
 <script src="{{asset('public/backend/js/jquery2.0.3.min.js')}}"></script>
 </head>
-<body>
+<body style="background-color: #d2fbf6;">
 <div class="log-w3">
 <div class="w3layouts-main">
 	<h2 style="color: white;">Đăng Nhập</h2>

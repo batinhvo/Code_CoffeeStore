@@ -24,6 +24,7 @@ Route::get('/all-product-page','App\Http\Controllers\HomeController@all_product'
 Route::post('/autocomplete-ajax','App\Http\Controllers\HomeController@autocomplete_ajax');
 Route::get('/lichsu/{customer_id}','App\Http\Controllers\HomeController@lichsu');
 Route::get('/chitiet-lichsu/{order_id}','App\Http\Controllers\HomeController@chitiet_lichsu');
+Route::post('/sap-xep','App\Http\Controllers\HomeController@all_product_sx');
 
 //Danh mục sản phẩm trang chủ
 Route::get('/danh-muc-san-pham/{category_id}','App\Http\Controllers\CategoryProduct@show_category_home');

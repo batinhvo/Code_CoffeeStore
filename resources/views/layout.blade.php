@@ -77,7 +77,7 @@
                                 <li><a href="{{URL::to('/lichsu/'.$customer_id)}}"><i class="fa fa-star"></i> Lịch sử mua hàng</a></li>
                             <?php
                                 }else{ 	?>
-                            <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-crosshairs"></i> Lịch sử mua hàng</a></li>
+                            <li><a href="{{URL::to('/login-checkout')}}"><i class="fa fa-star"></i> Lịch sử mua hàng</a></li>
                             <?php }?>
 
 								<?php
@@ -386,8 +386,7 @@
 	<script src="{{asset('public/frontend/js/main.js')}}"></script>
 	<script src="{{asset('public/frontend/js/sweetalert.min.js')}}"></script>
 	<script type="text/javascript">
-
-			
+		
 
 			// chatbox mới tạo ở đây nè
 			$(document).ready(function(){

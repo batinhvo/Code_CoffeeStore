@@ -31,7 +31,7 @@
             <th>Ngày gửi</th>
             <th>Tên sản phẩm</th>
             <th>Hình ảnh</th>
-            <th>Quản lý</th>
+            <th>Xóa</th>
             <!-- <th>Ngày thêm</th> -->
             <th style="width:30px;"></th>
           </tr>

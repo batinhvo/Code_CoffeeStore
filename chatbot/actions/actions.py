@@ -41,9 +41,9 @@ class Tl_sp_co_khong(Action):
         link = "http://localhost/Code_CoffeeStore/chi-tiet-san-pham/"+result77
         print(link)
         if (result == []):
-            dispatcher.utter_message("Hiện tại cửa KHÔNG CÓ sản phẩm này. Bạn có thể tìm thấy sản phẩm tương tự tại mục sản phẩm của cửa hàng \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)") 
+            dispatcher.utter_message("Hiện tại cửa không có sản phẩm này. Bạn có thể tìm thấy sản phẩm tương tự tại mục sản phẩm của cửa hàng \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)") 
         else:
-            dispatcher.utter_message("Hiện tại cửa hàng ĐANG CÓ sản phẩm này. Bạn có thể tìm thấy sản phẩm \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)")
+            dispatcher.utter_message("Hiện tại cửa hàng đang kinh doanh sản phẩm này. Bạn có thể tìm thấy sản phẩm \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)")
         myconn.close()
         return []
 

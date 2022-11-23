@@ -23,7 +23,7 @@ class CheckoutController extends Controller
         $city=City::where('matp',Session::get('matp'))->first();
         $province=Province::where('maqh',Session::get('maqh'))->first();
         $wards=Wards::where('xaid',Session::get('maxp'))->first();
-        
+
         $shipping_address= $wards->name_xaphuong.', '.$province->name_quanhuyen.', '.$city->name_thanhpho;
         $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
         $category_product = DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();

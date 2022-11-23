@@ -6,8 +6,15 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_chao
   - intent: mood_great
   - action: utter_happy
+
+- story: xin chao
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - action: utter_chao
 
 - story: Hỏi về giá sản phẩm
   steps:
@@ -120,6 +127,7 @@ stories:
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_chao
   - intent: Hoi_san_pham_cf_ht
   - action: utter_ht
   - intent: Hoi_san_pham_cf_hat
@@ -133,10 +141,12 @@ stories:
   - intent: goodbye
   - action: utter_goodbye
 
+
 - story: kich ban ht
   steps:
   - intent: greet
   - action: utter_greet
+  - action: utter_chao
   - intent: Hoi_san_pham_cf_ht
   - action: utter_ht
   - intent: Hoi_ve_san_pham_khac

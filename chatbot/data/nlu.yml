@@ -32,16 +32,21 @@ nlu:
     - gặp lại sau
     - tạm biệt
     - cảm ơn
+    - bái bai
 
-- intent: Hoi_th_trung_nguyen #5
+- intent: Hoi_th_trung_nguyen #10
   examples: |
     - thương hiệu trung nguyên có những sản phẩm nào
     - cà phê trung nguyên thì sao
     - trung nguyên
-    - thuong hieu
     - trung nguyen
+    - cà phê trung nguyên có những sản phẩm nào?
+    - ca phe trung nguyen co nhung san pham nao
+    - thuong hieu trung nguyen
+    - thương hiệu trung nguyên
+    - thương hiệu cafe trung nguyên 
 
-- intent: Hoi_th_leelong #6
+- intent: Hoi_th_leelong #8
   examples: |
     - thương hiệu leelong có những sản phẩm nào
     - cà phê leelong thì sao
@@ -49,31 +54,42 @@ nlu:
     - thuong hieu leelong
     - leelong ca phe
     - leelong Coffee
+    - cà phê leelong có những sản phẩm nào ?
+    - thương hiệu leelong cafe 
 
-- intent: Hoi_th_vinacafe #5
+- intent: Hoi_th_vinacafe #9
   examples: |
     - thương hiệu vinacafe có những sản phẩm nào
     - cà phê vinacafe thì sao
     - vinacafe
     - vina
     - cà phê vina
+    - sản phẩm từ thương hiệu vinacafe gồm những sản phẩm nào?
+    - san pham tu thuong hieu vinacafe gom nhung san pham nao vay?
+    - tôi muốn xem sản phẩm của thương hiệu vinacafe
+    - toi muon xem san pham cua thuong hieu vinacafe
 
-- intent: Hoi_th_highlands #5
+- intent: Hoi_th_highlands #8
   examples: |
     - thương hiệu highlands có những sản phẩm nào
     - cà phê highlands thì sao
     - highlands
     - highland
     - hightland
+    - thuong hieu ca phe highland
+    - thương hiệu cà phê highland
+    - thương hiệu 2land
+    
 
-
-- intent: Hoi_th_90s #5
+- intent: Hoi_th_90s #7
   examples: |
     - thương hiệu 90S coffee việt nam có những sản phẩm nào
     - cà phê 90S coffee việt nam thì sao
     - 90S coffee việt nam
     - 90S coffee
     - 90S
+    - thuong hieu ca phe 90S coffee việt nam
+    - thương hiệu 90S coffee việt nam
 
 - intent: Hoi_th_lelit #5
   examples: |
@@ -83,7 +99,7 @@ nlu:
     - sản pham lelit
     - sản phẩm lelit
 
-- intent: Hoi_khong_noi_dung #12
+- intent: Hoi_khong_noi_dung #13
   examples: |
     - trà
     - trái
@@ -96,8 +112,9 @@ nlu:
     - e1e4e5x2ce1
     - ....,,...
     - }.{,]/[;.,,.=-/.;?'><()\|-*/+
+    - qazxswedcvfrtgbnhyujmkiolp
 
-- intent: Hoi_thuong_hieu #15
+- intent: Hoi_thuong_hieu #18
   examples: |
     - cửa hàng kinh doanh sản phẩm cửa thương hiệu nào
     - thương hiệu sản phẩm
@@ -113,6 +130,9 @@ nlu:
     - nhãn hàng
     - dòng sản phẩm của thương hiệu nào
     - nhan hang nao dang kinh doanh
+    - shop đang bán sản phẩm của thương hiệu nào
+    - shop dang ban san pham cua thuong hieu nao vay
+    - shop đang kinh doanh sản phẩm của thương hiệu nào vậy
 
 - intent: Hoi_sdt #13
   examples: |
@@ -176,7 +196,7 @@ nlu:
     - máy pha cà phê
     - máy xay cà phê
 
-- intent: Hoi_cua_hang_kinh_doanh_gi #19
+- intent: Hoi_cua_hang_kinh_doanh_gi #22
   examples: |
     - cửa hàng có những loại sản phẩm nào?
     - cửa hàng có những loại cà phê nào?
@@ -196,6 +216,9 @@ nlu:
     - danh mục sản phẩm
     - danh muc san pham cua cua hang
     - cac danh muc san pham cua cua hang
+    - cà phê
+    - cafe
+    - coffee
 
 
 
@@ -407,7 +430,7 @@ nlu:
     - có [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
     - có [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
 
-- intent: Hoi_gia_sp
+- intent: Hoi_gia_sp #14
   examples: |
     - sản phẩm [cafe chất](product_name) giá bao nhiêu vậy?
     - [cafe chất](product_name) giá bao nhiêu vậy?
@@ -423,3 +446,5 @@ nlu:
     - giá [cà phê 3 in 1 GOLD](product_name) giá bao nhiêu vậy?
     - giá [Cà phê hạt Espresso Trung Nguyên 500g](product_name) giá bao nhiêu vậy?
     - giá [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) giá bao nhiêu vậy?
+    - giá [máy xay cà phê Grinta](product_name) giá bao nhiêu vậy?
+    - giá [máy pha cafe Anita PL042EMI](product_name) giá bao nhiêu vậy?

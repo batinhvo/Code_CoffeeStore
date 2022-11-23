@@ -9,7 +9,7 @@
 </head>
 <body>
 <style>  
-    body{ font-family:DejaVu Sans; margin: -20px 400px 0px 400px}
+    body{ font-family:DejaVu Sans; margin: -10px 400px 0px 400px}
     table, th, td{
         border:1px solid black;
         padding: 5px;
@@ -114,15 +114,17 @@
     </table>
     
     </table>
-    <br><br>
-    <a href="{{URL::to('/lichsu/'.$ord->customer_id)}}"><button style="    width: 75px;
+    
+    
+    
+</div>
+<br><br>
+<a href="{{URL::to('/lichsu/'.$ord->customer_id)}}"><button style="    width: 75px;
     height: 30px;
     font-size: 18px;
     color: white;
     background: brown;
     margin-left:300px">Trở về</button></a>
-    
-</div>
 @endforeach
 </body>
 </html>

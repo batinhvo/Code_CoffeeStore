@@ -103,7 +103,7 @@ responses:
   - text: "Phí giao hàng trong khoảng từ 30000đ-50000đ. Bạn có thể biết rõ về khoảng tiền giao hàng khi tiến hành đặt hàng."
 
   utter_greet:
-  - text: "CoffeStore xin chào! \nHãy nhập từ khóa bạn muốn tìm để mình có thể giải đáp thắc mắc giúp bạn nhé!"
+  - text: "CoffeStore xin chào! \nHãy nhập từ khóa bạn muốn tìm để mình có thể giải đáp thắc mắc giúp bạn!"
 
   utter_rx:
   - text: "Một số gợi ý sản phẩm cà phê rang xay: [Cà phê số 5 Dịu](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/39), [Sành điệu 200g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/33), [Cà phê siêu sạch Sáng tạo 8 500g](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/26),...\nBạn có thể xem thông tin chi tiết khi click vào tên sản phẩm."
@@ -134,6 +134,9 @@ responses:
 
   utter_happy:
   - text: "Cảm ơn bạn đã ghé thăm cửa hàng!"
+
+  utter_chao:
+  - text: "Bạn có thể nhập <Cà phê> để xem danh mục sản phẩm của cửa hàng nhé!"
 
   utter_goodbye:
   - text: "CoffeeStore trân trọng cảm ơn bạn đã quan tâm. Hẹn gặp lại!"

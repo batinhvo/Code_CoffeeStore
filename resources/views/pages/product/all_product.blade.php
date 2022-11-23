@@ -1,6 +1,13 @@
 @extends('normal_layout')
 @section('content')
 <div class="features_items"><!--features_items-->
+        <!-- <div class="search_box" style="width: 200px">
+        <form method="post" action="{{URL::to('/sap-xep')}}">
+            {{csrf_field()}}
+            <input name="coupon" type="text" class="form-control" placeholder="Nhập mã giảm giá">
+            <input type="submit" class="btn btn-default check_out" value="OK" name="check_coupon">
+        </form>
+        </div> -->
         <h2 class="title text-center">SẢN PHẨM CỦA CỬA HÀNG</span></h2>
         @foreach($all_product as $key =>$product)
         <div class="col-sm-4">

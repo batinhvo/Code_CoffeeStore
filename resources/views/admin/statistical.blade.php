@@ -24,7 +24,7 @@
         <table class="table table-striped b-t b-light">
             <thead>
                 <tr>     
-                    <th>TỔNG TIỀN BÁN</th>
+                    <th>TỔNG DOANH THU</th>
                     <th>TỔNG TIỀN VỐN</th>
                     <th>LỢI NHUẬN </th>
                     <th>SỐ LƯỢNG HÀNG ĐÃ BÁN </th>
