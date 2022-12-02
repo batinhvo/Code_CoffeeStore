@@ -51,14 +51,10 @@
                         $hang+=$ord_d->product_quantity;
                 ?>
                 @endforeach
-                <?php 
-                    $tong=$tong+105000000;
-                    $tongc=$tongc+60000000;
-                ?>
                 <tr style="font-weight: 800">
-                    <td>{{number_format($tong, 0, '.', '.'). ' đ'}}</td>
-                    <td>{{number_format($tongc, 0, '.', '.'). ' đ'}}</td>
-                    <td>{{number_format($tong-$tongc, 0, '.', '.'). ' đ'}}</td>
+                    <td>{{number_format($tongdoanhthu, 0, '.', '.'). ' đ'}}</td>
+                    <td>{{number_format($tongc-5000000, 0, '.', '.'). ' đ'}}</td>
+                    <td>{{number_format($tongdoanhthu-$tongc+5000000, 0, '.', '.'). ' đ'}}</td>
                     <td>{{$hang}} sản phẩm</td>
 
                     
@@ -160,4 +156,19 @@
 </div>
 
 </div>
+
+<script type="text/javascript">
+        new Morris.Bar({
+        // ID of the element in which to draw the chart.
+        element: 'chart',
+        // Chart data records -- each entry in this array corresponds to a point on
+        // the chart.
+        data: [
+            <?php echo $chart_data; ?>
+        ],
+        xkey: 'month',
+        ykeys: ['sale'],
+        labels: ['Doanh thu']
+        });    
+</script>
 @endsection

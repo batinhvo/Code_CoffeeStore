@@ -21,8 +21,8 @@
 						<h2>Đăng nhập tài khoản</h2>
 						<form action="{{URL::to('/login-customer')}}" method="post">
                             {{csrf_field()}}
-							<input type="text" name="email_account" placeholder="Email" />
-							<input type="password" name="password_account" placeholder="Password" />
+							<input required type="text" name="email_account" placeholder="Email" />
+							<input required type="password" name="password_account" placeholder="Password" />
 							<span>
 								<input type="checkbox" name="password_account" class="checkbox"> 
 								Ghi nhớ đăng nhập

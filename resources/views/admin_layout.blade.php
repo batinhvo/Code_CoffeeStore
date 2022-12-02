@@ -315,30 +315,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         
         // });
 
-        chart30daysonder();
-        new Morris.Bar({
-        // ID of the element in which to draw the chart.
-        element: 'chart',
-        // Chart data records -- each entry in this array corresponds to a point on
-        // the chart.
-        data: [
-            { y: 'Tháng 01', a: 3230000},
-            { y: 'Tháng 02', a: 17310000},
-            { y: 'Tháng 03', a: 17230000},
-            { y: 'Tháng 04', a: 24000000},
-            { y: 'Tháng 05', a: 10000000},
-            { y: 'Tháng 06', a: 12000000},
-            { y: 'Tháng 07', a: 16500000},
-            { y: 'Tháng 08', a: 28000000},
-            { y: 'Tháng 09', a: 15620000},
-            { y: 'Tháng 10', a: 10200000},
-            { y: 'Tháng 11', a: 24300000},
-            { y: 'Tháng 12', a: 13060000},
-        ],
-        xkey: 'y',
-        ykeys: ['a'],
-        labels: ['Doanh thu']
-        });
+        // chart30daysonder();
+        // new Morris.Bar({
+        // // ID of the element in which to draw the chart.
+        // element: 'chart',
+        // // Chart data records -- each entry in this array corresponds to a point on
+        // // the chart.
+        // data: [
+        //     { y: 'Tháng 01', a: 3230000},
+        //     { y: 'Tháng 02', a: 17310000},
+        //     { y: 'Tháng 03', a: 17230000},
+        //     { y: 'Tháng 04', a: 24000000},
+        //     { y: 'Tháng 05', a: 10000000},
+        //     { y: 'Tháng 06', a: 12000000},
+        //     { y: 'Tháng 07', a: 16500000},
+        //     { y: 'Tháng 08', a: 28000000},
+        //     { y: 'Tháng 09', a: 15620000},
+        //     { y: 'Tháng 10', a: 10200000},
+        //     { y: 'Tháng 11', a: 24300000},
+        //     { y: 'Tháng 12', a: 13060000},
+        // ],
+        // xkey: 'y',
+        // ykeys: ['a'],
+        // labels: ['Doanh thu']
+        // });
 
         function chart30daysonder(){
             var _token = $('input[name="_token"]').val();

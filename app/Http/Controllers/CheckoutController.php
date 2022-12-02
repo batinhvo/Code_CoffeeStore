@@ -202,23 +202,37 @@ class CheckoutController extends Controller
         $data['customer_email']=$request->customer_email;
         $data['customer_password']=md5($request->customer_password);
         $data['customer_phone']=$request->customer_phone;
+        $email = $request->customer_email;
+        $email_o = DB::table('tbl_customer')->where('customer_email',$email)->get();    
+        foreach($email_o as $e){
+            $email_old = $e->customer_email;
+        } 
         $phone = strlen($request->customer_phone);
+        $dt = $request->customer_phone;
         $pass = strlen($request->customer_password);
-        $pa = ctype_digit($request->customer_phone);
-        if($phone < 10 || $phone > 11 || $pa != 1){
+        $pa = ctype_digit(substr($dt,1));
+        if($phone < 10 || $phone > 13 || $pa != 1){
             Session::put('message','Số điện thoại không đúng!');
             return redirect()->back();
-        }else if($pass < 8){
-            Session::put('message','Mật khẩu quá ngắn! Vui lòng nhập mật khẩu dài hơn 8 ký tự.');
-            return redirect()->back();
-        }else if($pass > 20){
-            Session::put('message','Mật khẩu quá dài!');
-            return redirect()->back();
+        }else if($dt[0] == "0" || $dt[0] == "+"){
+            if($email == $email_old){
+                Session::put('message','Tài khoản đã tồn tại! Vui lòng chọn email mới!');
+                return redirect()->back();
+            }else if($pass < 8){
+                Session::put('message','Mật khẩu quá ngắn! Vui lòng nhập mật khẩu dài hơn 8 ký tự.');
+                return redirect()->back();
+            }else if($pass > 20){
+                Session::put('message','Mật khẩu quá dài!');
+                return redirect()->back();
+            }else{
+                // $customer_id= DB::table('tbl_customer')->insertGetId($data);
+                // Session::put('customer_id',$customer_id);
+                // Session::put('customer_name',$request->customer_name);
+                // return Redirect('/trang-chu');
+            }
         }else{
-            $customer_id= DB::table('tbl_customer')->insertGetId($data);
-            Session::put('customer_id',$customer_id);
-            Session::put('customer_name',$request->customer_name);
-            return Redirect('/trang-chu');
+            Session::put('message','Số điện thoại không đúng!');
+            return redirect()->back();
         }
         
     }
@@ -257,9 +271,6 @@ class CheckoutController extends Controller
             Session::put('customer_id',$result->customer_id);
             Session::put('customer_name',$result->customer_name);
             return Redirect('/trang-chu');
-        }if($result == []){
-            Session::put('message','Vui lòng điền đầy đủ Tên đăng nhập và mật khẩu!');
-            return Redirect('/login-checkout');
         }else{
             Session::put('message','Mật khẩu hoặc tên đăng nhập không đúng!');
             return Redirect('/login-checkout');

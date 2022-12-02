@@ -125,17 +125,29 @@ class HomeController extends Controller
         ->with('slider',$slider)->with('post',$post);
     }
 
-    public function all_product_sx(Request $request){
-        // $slider=Slider::where('slider_status',1)->orderBy('slider_id','DESC')->get();
-        // $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
-        // $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
-        // $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
-        // $all_product=DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->paginate(30);
-        // return view('pages.product.all_product')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('all_product',$all_product)
-        // ->with('slider',$slider)->with('post',$post);
-        $masa=$request->sapxep;
-        echo $masa;
-    }
+    // public function all_product_sx(Request $request){
+    //     $slider=Slider::where('slider_status',1)->orderBy('slider_id','DESC')->get();
+    //     $post=CategoryPost::where('category_post_status',1)->orderBy('category_post_id','DESC')->get();
+    //     $category_product=DB::table('tbl_category_product')->where('category_status','1')->orderby('category_id','desc')->get();
+    //     $brand_product=DB::table('tbl_brand')->where('brand_status','1')->orderby('brand_id','desc')->get();
+    //     $all_product=DB::table('tbl_product')->where('product_status','1')->orderby('product_id','desc')->paginate(30);
+    //     // $all_product=DB::table('tbl_product')->where('product_status','1')->get();
+    //     // foreach($all_product as $product){
+    //     //     $price = $product->product_price;
+    //     //     $prices = (int)$price;
+    //                echo '<pre>';
+    //     print_r($all_product);
+    //    echo '</pre>';
+    //     // }
+        
+    //     // if($request->sort_select==1){
+    //     //     $all_product=DB::table('tbl_product')->where('product_status','1')->orderby('product_price','asc')->paginate(30);
+    //     // }
+        
+
+    //     //return view('pages.product.all_product')->with('category_product',$category_product)->with('brand_product',$brand_product)->with('all_product',$all_product)
+    //     //->with('slider',$slider)->with('post',$post);
+    // }
 
     public function search(Request $request){
         $keywords=$request->keywords;

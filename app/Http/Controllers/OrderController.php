@@ -37,11 +37,96 @@ class OrderController extends Controller
         $order_all=DB::table('tbl_order')
         ->join('tbl_order_detail','tbl_order.order_id','=','tbl_order_detail.order_id')
         ->where('tbl_order.order_status',2)->orderby('order_code','DESC')->get();
+        $thang1=DB::table('tbl_order')->where('created_at','like','%'."2022-01".'%')->orderby('order_id','desc')->get();
+        $thang2=DB::table('tbl_order')->where('created_at','like','%'."2022-02".'%')->orderby('order_id','desc')->get();
+        $thang3=DB::table('tbl_order')->where('created_at','like','%'."2022-03".'%')->orderby('order_id','desc')->get();
+        $thang4=DB::table('tbl_order')->where('created_at','like','%'."2022-04".'%')->orderby('order_id','desc')->get();
+        $thang5=DB::table('tbl_order')->where('created_at','like','%'."2022-05".'%')->orderby('order_id','desc')->get();
+        $thang6=DB::table('tbl_order')->where('created_at','like','%'."2022-06".'%')->orderby('order_id','desc')->get();
+        $thang7=DB::table('tbl_order')->where('created_at','like','%'."2022-07".'%')->orderby('order_id','desc')->get();
+        $thang8=DB::table('tbl_order')->where('created_at','like','%'."2022-08".'%')->orderby('order_id','desc')->get();
+        $thang9=DB::table('tbl_order')->where('created_at','like','%'."2022-09".'%')->orderby('order_id','desc')->get();
+        $thang10=DB::table('tbl_order')->where('created_at','like','%'."2022-10".'%')->orderby('order_id','desc')->get();
+        $thang11=DB::table('tbl_order')->where('created_at','like','%'."2022-11".'%')->orderby('order_id','desc')->get();
+        $thang12=DB::table('tbl_order')->where('created_at','like','%'."2022-12".'%')->orderby('order_id','desc')->get();
+        $tong_th1=0;
+        $tong_th2=0;
+        $tong_th3=0;
+        $tong_th4=0;
+        $tong_th5=0;
+        $tong_th6=0;
+        $tong_th7=0;
+        $tong_th8=0;
+        $tong_th9=0;
+        $tong_th10=0;
+        $tong_th11=0;
+        $tong_th12=0;
+        foreach($thang1 as $th1){
+            $tien_th1=$th1->order_total;
+            $tong_th1+=$tien_th1;
+        }
+        foreach($thang2 as $th2){
+            $tien_th2=$th2->order_total;
+            $tong_th2+=$tien_th2;
+        }
+        foreach($thang3 as $th3){
+            $tien_th3=$th3->order_total;
+            $tong_th3+=$tien_th3;
+        }
+        foreach($thang4 as $th4){
+            $tien_th4=$th4->order_total;
+            $tong_th4+=$tien_th4;
+        }
+        foreach($thang5 as $th5){
+            $tien_th5=$th5->order_total;
+            $tong_th5+=$tien_th5;
+        }
+        foreach($thang6 as $th6){
+            $tien_th6=$th6->order_total;
+            $tong_th6+=$tien_th6;
+        }
+        foreach($thang7 as $th7){
+            $tien_th7=$th7->order_total;
+            $tong_th7+=$tien_th7;
+        }
+        foreach($thang8 as $th8){
+            $tien_th8=$th8->order_total;
+            $tong_th8+=$tien_th8;
+        }
+        foreach($thang9 as $th9){
+            $tien_th9=$th9->order_total;
+            $tong_th9+=$tien_th9;
+        }
+        foreach($thang10 as $th10){
+            $tien_th10=$th10->order_total;
+            $tong_th10+=$tien_th10;
+        }
+        foreach($thang11 as $th11){
+            $tien_th11=$th11->order_total;
+            $tong_th11+=$tien_th11;
+        }
+        foreach($thang12 as $th12){
+            $tien_th12=$th12->order_total;
+            $tong_th12+=$tien_th12;
+        }
+        $chart_data='';
+        $so=0;
+        $T_thang=array($tong_th1,$tong_th2,$tong_th3,$tong_th4,$tong_th5,$tong_th6,$tong_th7,$tong_th8,$tong_th9,$tong_th10,$tong_th11,$tong_th12);
+        $thang=array("Tháng 1","Tháng 2","Tháng 3","Tháng 4","Tháng 5","Tháng 6","Tháng 7","Tháng 8","Tháng 9","Tháng 10","Tháng 11","Tháng 12");
+        for($i=0;$i<=11;$i++){
+            $chart_data .= "{ month:'".$thang[$i]."', sale:".$T_thang[$i]."}, ";
+        }
+        $chart_data = substr($chart_data,0,-2);
+        $tongdoanhthu=0;
+        $tongdoanhthu=$tong_th1=$tong_th2+$tong_th3+$tong_th4+$tong_th5+$tong_th6+$tong_th7+$tong_th8+$tong_th9+$tong_th10+$tong_th11+$tong_th12;
         // echo '<pre>';
-        //     print_r($get);
+        //     print_r($chart_data);
+        // echo '</pre>';
+        // echo '<pre>';
+        //     print_r($T_thang);
         // echo '</pre>';
 
-        return view('admin.statistical')->with(compact('order_all'))->with(compact('order'))->with(compact('or_detail'));
+        return view('admin.statistical')->with(compact('order_all'))->with(compact('order'))->with(compact('or_detail'))->with(compact('chart_data'))->with(compact('tongdoanhthu'));
     }
 
     public function delete_order($order_id){

@@ -11,6 +11,7 @@
 			
 			<div class="register-req">
 				<p>Đăng kí hoặc đăng nhập để thanh toán giỏ hàng và xem lại lịch sử mua hàng</p>
+				<p>Nhập mã: <b>noel</b> để nhận giảm giá Tháng 12 bạn nhé!</p>
 			</div><!--/register-req-->
 
 			<div class="shopper-informations">
