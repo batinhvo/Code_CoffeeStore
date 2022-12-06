@@ -175,7 +175,7 @@ nlu:
     - toi muon biet vi tri cua cua hang
     - toi muon biet dia chi cua shop
 
-- intent: Hoi_nguon_goc #9
+- intent: Hoi_nguon_goc #11
   examples: |
     - sản phẩm có nguồn gốc từ đâu?
     - cà phê có nguồn gốc từ đâu
@@ -186,6 +186,8 @@ nlu:
     - nhap hang
     - lấy hàng
     - lay hang
+    - cà phê có nguyên chất không
+    - ca phe co nguyen chat khong
 
 - intent: Hoi_dung_cu_pha_che #6
   examples: |
@@ -196,7 +198,7 @@ nlu:
     - máy pha cà phê
     - máy xay cà phê
 
-- intent: Hoi_cua_hang_kinh_doanh_gi #22
+- intent: Hoi_cua_hang_kinh_doanh_gi #24
   examples: |
     - cửa hàng có những loại sản phẩm nào?
     - cửa hàng có những loại cà phê nào?
@@ -219,6 +221,9 @@ nlu:
     - cà phê
     - cafe
     - coffee
+    - bạn có bán gì
+    - ban co ban gi
+
 
 
 
@@ -406,14 +411,14 @@ nlu:
     - [truyền thống 1kg](product_name) có bán ở đây không?
     - [cà phê rang và xay classic](product_name) có bán ở đây không?
     - [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán ở đây không?
-    - có [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán không?
-    - có [Cà phê G7 Hoà tan đen Trung Nguyên](product_name) có bán không?
-    - có [cà phê số 5](product_name) có bán không?
-    - có [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
-    - có [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
-    - có [cà phê 3 in 1 GOLD](product_name) có bán không?
-    - có [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
-    - có [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
+    - có bán [cà phê siêu sạch sáng tạo 8 500g](product_name) có bán không?
+    - có bán [Cà phê G7 Hoà tan đen Trung Nguyên](product_name) có bán không?
+    - có bán [cà phê số 5](product_name) có bán không?
+    - có bán [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
+    - có bán [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
+    - có bán [cà phê 3 in 1 GOLD](product_name) có bán không?
+    - có bán [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
+    - có bán [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
     - tôi muốn hỏi về [cafe chat](product_name)
     - tôi muốn hỏi về [sanh đieu 200g](product_name)
     - [cafe chat](product_name) có bán ở đây không?
@@ -421,14 +426,16 @@ nlu:
     - [truyen thong 1kg](product_name) có bán ở đây không?
     - [ca phe rang va xay classic](product_name) có bán ở đây không?
     - [ca phe sieu sach sang tao 8 500g](product_name) có bán ở đây không?
-    - có [ca phe sieu sach sang tao 8 500g](product_name) có bán không?
-    - có [Ca phe G7 Hoa tan đen Trung Nguyên](product_name) có bán không?
-    - có [cà phê số 5](product_name) có bán không?
-    - có [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
-    - có [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
-    - có [cà phê 3 in 1 GOLD](product_name) có bán không?
-    - có [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
-    - có [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
+    - có bán [ca phe sieu sach sang tao 8 500g](product_name) có bán không?
+    - có bán [Ca phe G7 Hoa tan đen Trung Nguyên](product_name) có bán không?
+    - có bán [cà phê số 5](product_name) có bán không?
+    - có bán [Cà phê Robusta Đắk Lắk 1kg](product_name) có bán không?
+    - có bán [Cà Phê Highlands Coffee 3in1 Hòa Tan hộp 20 Gói x 17g](product_name) có bán không?
+    - có bán [cà phê 3 in 1 GOLD](product_name) có bán không?
+    - có bán [Cà phê hạt Espresso Trung Nguyên 500g](product_name) có bán không?
+    - có bán [Cà Phê Hạt Robusta Rang Mộc Nguyên Chất](product_name) có bán không?
+    - có bán [máy xay cà phê Grinta](product_name) có bán không?
+    - có bán [máy pha cafe Anita PL042EMI](product_name) có bán không?
 
 - intent: Hoi_gia_sp #14
   examples: |

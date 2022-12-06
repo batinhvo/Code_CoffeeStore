@@ -8,7 +8,7 @@
 # This is a simple example for a custom action which utters "Hello World!"
 
 from typing import Any, Text, Dict, List
-
+from PIL import Image
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import random
@@ -30,20 +30,28 @@ class Tl_sp_co_khong(Action):
         myconn = mysql.connector.connect(host = "localhost", user = "root", passwd = "", database="coffeestore")
         cf_db = myconn.cursor()
         codeOfcoffee = "SELECT product_name FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
-        product_id = "SELECT product_id FROM tbl_product WHERE product_name LIKE '{}'".format(pro_name)
+        product_sp = "SELECT product_id, product_price FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
         cf_db.execute(codeOfcoffee)
         result = cf_db.fetchall()
         print(codeOfcoffee)
-        cf_db.execute(product_id)
-        result55 = str(cf_db.fetchall())
-        result66 = result55.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
-        result77 = result66.replace("'", ' ').replace('[' ,' ').replace( ']', ' ')
-        link = "http://localhost/Code_CoffeeStore/chi-tiet-san-pham/"+result77
-        print(link)
+
+        cf_db.execute(product_sp)
+        result1 = str(cf_db.fetchall())
+        result_vtri = result1.find(",")
+        result_id = result1[0:result_vtri]
+        result_price = result1[result_vtri:]
+        result_so = result_id.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
+        result_gia = result_price.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
+        so = result_so.replace("'", '').replace("[", '')
+        result2 = ((result_gia.replace("'", '').replace("]", '')+"vnđ").replace(" ", ''))
+        print(result)
+        s=int(so)
         if (result == []):
-            dispatcher.utter_message("Hiện tại cửa không có sản phẩm này. Bạn có thể tìm thấy sản phẩm tương tự tại mục sản phẩm của cửa hàng \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)") 
+            dispatcher.utter_message("Hiện tại cửa không kinh doanh sản phẩm này. Bạn có thể tìm thấy sản phẩm tương tự từ mục sản phẩm của cửa hàng \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)") 
         else:
-            dispatcher.utter_message("Hiện tại cửa hàng đang kinh doanh sản phẩm này. Bạn có thể tìm thấy sản phẩm \n[Tại đây](http://localhost/Code_CoffeeStore/all-product-page)")
+            dispatcher.utter_message("Hiện tại cửa hàng đang kinh doanh sản phẩm này.")
+            dispatcher.utter_message("Giá sản phẩm là: "+result2)
+            dispatcher.utter_message("Bạn có thể xem thông tin chi tiết sản phẩm.[Tại đây](http://localhost/Code_CoffeeStore/chi-tiet-san-pham/"+ str(s) +")")
         myconn.close()
         return []
 
@@ -57,16 +65,22 @@ class Tl_sp_co_khong(Action):
         # Lấy nội dung entity từ câu truy vấn
         myconn = mysql.connector.connect(host = "localhost", user = "root", passwd = "", database="coffeestore")
         cf_db = myconn.cursor()
-        codeOfcoffee = "SELECT product_price FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
+        codeOfcoffee = "SELECT product_name, product_price FROM tbl_product WHERE product_name LIKE '%{}%'".format(pro_name)
         cf_db.execute(codeOfcoffee)
         result = str(cf_db.fetchall())
-        results = result.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
-        result1 = results.replace("'", ' ')
-        print(codeOfcoffee)
+        result_vtri = result.find(",")
+        result_name = result[0:result_vtri]
+        result_price = result[result_vtri:]
+        result_ten = result_name.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
+        result_gia = result_price.replace('(' , ' ').replace( ')' , ' ').replace(',' , ' ')
+        result1 = result_ten.replace("'", '').replace("[", '')
+        result2 = ((result_gia.replace("'", '').replace("]", '')+"vnđ").replace(" ", ''))
+        print(result)
+        print(result_name)
         if (result == []):
-            dispatcher.utter_message("Hiện tại cửa hàng không có sản phẩm này!") 
+            dispatcher.utter_message("Hiện tại cửa hàng không kinh doanh sản phẩm này!") 
         else:
-            dispatcher.utter_message("Giá sản phẩm này là " + result1 + "vnđ")
+            dispatcher.utter_message("Giá sản phẩm "+result1+" là "+result2)
         myconn.rollback()
         myconn.close()
         return []
