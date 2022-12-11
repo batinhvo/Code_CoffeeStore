@@ -101,8 +101,14 @@ nlu:
 
 - intent: Hoi_khong_noi_dung #13
   examples: |
+    - bánh
+    - con
+    - cái
     - trà
     - trái
+    - cá 
+    - gà
+    - thứ
     - abc
     - xyz
     - 123456789
@@ -223,6 +229,18 @@ nlu:
     - coffee
     - bạn có bán gì
     - ban co ban gi
+
+- intent: Hoi_sp_khong_co_ban
+  examples: |
+    - bạn có bán trà xanh không?
+    - bán trà xanh
+    - ban tra xanh
+    - bạn có bán bánh bao không
+    - bán bánh bao
+    - ban banh bao
+    - bán trà hoa hồng
+    - bán bánh kẹo
+    - bán bánh không
 
 
 

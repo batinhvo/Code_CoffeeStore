@@ -26,6 +26,11 @@ stories:
   - intent: Hoi_sp_co_khong
   - action: Tl_sp_co_khong
 
+- story: Hỏi sản phẩm không có
+  steps:
+  - intent: Hoi_sp_khong_co_ban
+  - action: utter_tra_loi_sp_kco
+
 - story: Hỏi thương hiệu trung nguyên
   steps:
   - intent: Hoi_th_trung_nguyen
@@ -152,19 +157,27 @@ stories:
   - intent: Hoi_ve_san_pham_khac
   - action: utter_ht_khac
 
-- story: kich ban htan
+- story: kich ban hat
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: Hoi_san_pham_cf_ht
+  - intent: Hoi_san_pham_cf_hat
   - action: utter_ht
   - intent: thank
   - action: utter_happy
   - intent: goodbye
   - action: utter_goodbye
 
-
-
+- story: product path1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: Hoi_sp_co_khong
+  - action: Tl_sp_co_khong
+  - intent: Hoi_gia_sp
+  - action: Tl_gia_sp
+  - intent: goodbye
+  - action: utter_goodbye
 
 - story: sad path 1
   steps:

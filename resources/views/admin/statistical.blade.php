@@ -152,7 +152,7 @@
         <div id="chart" style="height: 250px;"></div>
     </div>
 
-    <a class="btn btn-warning" href="{{URL::to('/manage-order/')}}">Trở về</a>
+    <!-- <a class="btn btn-warning" href="{{URL::to('/manage-order/')}}">Trở về</a> -->
 </div>
 
 </div>

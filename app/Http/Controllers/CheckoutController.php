@@ -203,6 +203,7 @@ class CheckoutController extends Controller
         $data['customer_password']=md5($request->customer_password);
         $data['customer_phone']=$request->customer_phone;
         $email = $request->customer_email;
+        $email_old = '';
         $email_o = DB::table('tbl_customer')->where('customer_email',$email)->get();    
         foreach($email_o as $e){
             $email_old = $e->customer_email;
@@ -225,10 +226,10 @@ class CheckoutController extends Controller
                 Session::put('message','Mật khẩu quá dài!');
                 return redirect()->back();
             }else{
-                // $customer_id= DB::table('tbl_customer')->insertGetId($data);
-                // Session::put('customer_id',$customer_id);
-                // Session::put('customer_name',$request->customer_name);
-                // return Redirect('/trang-chu');
+                $customer_id= DB::table('tbl_customer')->insertGetId($data);
+                Session::put('customer_id',$customer_id);
+                Session::put('customer_name',$request->customer_name);
+                return Redirect('/trang-chu');
             }
         }else{
             Session::put('message','Số điện thoại không đúng!');
